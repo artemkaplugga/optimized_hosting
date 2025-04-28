@@ -1,0 +1,272 @@
+.features-section2 {
+    margin-top: 40px;
+    padding: 40px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.features-grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feature-item2 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.feature-icon2 {
+    width: 100%;
+    height: 263px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.feature-icon2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-item2 h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #000;
+    text-align: left;
+}
+
+.feature-item2 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 1440px) {
+    .features-section2 {
+        margin-top: 35px;
+        padding: 35px 0;
+    }
+
+    .features-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .feature-icon2 {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .feature-item2 p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .features-section2 {
+        margin-top: 30px;
+        padding: 30px 0;
+    }
+
+    .features-grid2 {
+        gap: 16px;
+    }
+
+    .feature-icon2 {
+        height: 220px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .feature-item2 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .features-section2 {
+        margin-top: 25px;
+        padding: 25px 0;
+    }
+
+    .features-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .feature-icon2 {
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .feature-item2 p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section2 {
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+
+    .features-grid2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-icon2 {
+        height: 240px;
+        margin-bottom: 16px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .feature-item2 p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-section2 {
+        margin-top: 15px;
+        padding: 15px 0;
+    }
+
+    .features-grid2 {
+        gap: 15px;
+    }
+
+    .feature-icon2 {
+        height: 200px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .feature-item2 p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .features-section2 {
+        margin-top: 12px;
+        padding: 12px 0;
+    }
+
+    .features-grid2 {
+        gap: 12px;
+    }
+
+    .feature-icon2 {
+        height: 180px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+
+    .feature-item2 h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .feature-item2 p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+}
+
+/* Добавляем общие стили для всех секций */
+.main-container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.sc-11485f23-0.lbQEJT {
+    width: 100%;
+    max-width: 100%;
+    margin: 115px 0 2rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.vds-tariffs {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+.discounts-block {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+.footer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 1440px) {
+    .main-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .sc-11485f23-0.lbQEJT {
+        margin-top: 100px;
+    }
+    
+    .sc-11485f23-0.lbQEJT,
+    .vds-tariffs,
+    .discounts-block,
+    .features-section2,
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

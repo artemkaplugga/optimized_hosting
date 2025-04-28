@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aëtix - Выделенные серверы</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/tarifs.css">
+    <link rel="stylesheet" href="./styles/dedicated-servers-animations.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-container">
+                <div class="left-section">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="Images/logo.svg" alt="Aëtix Logo">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <div class="nav-group">
+                            <div class="nav-item-dropdown">
+                                <div class="dropdown-toggle" tabindex="0">
+                                    <span>услуги</span>
+                                    <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <a href="tarifs.html" class="dropdown-link">
+                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        Виртуальные серверы
+                                    </a>
+                                    <a href="high_cpu.html" class="dropdown-link">
+                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        HIGH-CPU серверы
+                                    </a>
+                                    <a href="dedicated-servers.html" class="dropdown-link">
+                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        Выделенные серверы
+                                    </a>
+                                    <a href="storage_vps.html" class="dropdown-link">
+                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        storage VPS
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="/contact.html" class="nav-link">информация</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="auth-links">
+                    <a href="#" class="auth-link" id="loginBtn">вход</a>
+                    <span class="auth-separator">/</span>
+                    <a href="#" class="auth-link" id="registerBtn">регистрация</a>
+                    <div class="user-profile" id="userProfile">
+                        <div class="user-avatar" id="userAvatar">
+                        </div>
+                        <div class="user-menu">
+                            <div class="user-menu-header">
+                                <div class="user-name"></div>
+                                <div class="user-email"></div>
+                            </div>
+                            <div class="user-menu-items">
+                                <a href="cabinet.html" class="user-menu-item">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                    Личный кабинет
+                                </a>
+                                <a href="#" class="user-menu-item logout-item" id="logoutBtn">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                                    </svg>
+                                    Выйти
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- Мобильное меню -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav-menu">
+                    <div class="mobile-nav-item">
+                        <button class="mobile-dropdown-toggle">
+                            <span>услуги</span>
+                            <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-menu">
+                            <a href="tarifs.html" class="mobile-dropdown-link">
+                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                Виртуальные серверы
+                            </a>
+                            <a href="high_cpu.html" class="mobile-dropdown-link">
+                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                HIGH-CPU серверы
+                            </a>
+                            <a href="dedicated-servers.html" class="mobile-dropdown-link">
+                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                Выделенные серверы
+                            </a>
+                            <a href="storage_vps.html" class="mobile-dropdown-link">
+                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                storage VPS
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="/contact.html" class="mobile-nav-link">информация</a>
+                    </div>
+                </nav>
+                <div class="mobile-auth-buttons">
+                    <a href="#" class="login-btn" id="mobileLoginBtn">вход</a>
+                    <a href="#" class="signup-btn" id="mobileRegisterBtn">регистрация</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="sc-11485f23-0 lbQEJT">
+                <div class="sc-11485f23-1 kpbPLB">
+                    <h1 class="sc-ec1e59c8-12 sc-11485f23-2 GyTBt cVIVAZ">выделенные серверы</h1>
+                    <div class="sc-ec1e59c8-14 sc-11485f23-3 cSDhX cFoCvl">Мощные выделенные серверы с процессорами AMD и Intel последнего поколения</div>
+                </div>
+
+                <video autoplay="" loop="" playsinline="" disablepictureinpicture="" class="sc-11485f23-4 iGhjqz">
+                    <source src="https://io.aeza.net/videos/dedicated.mp4" type="video/mp4">
+                </video>
+
+                <div class="sc-11485f23-8 cUqbaZ">
+                    <form class="sc-11485f23-9 eQIRCX">
+                        <input required="" placeholder="эл. почта" class="sc-11485f23-10 cdBDQq" type="email" value="">
+                        <button type="submit" class="sc-ec1e59c8-7 sc-11485f23-11 qVUMs fEQbdR">зарегистрироваться</button>
+                    </form>
+                    <div class="sc-11485f23-14 iEWDRW"></div>
+                    <div class="sc-11485f23-12 ifCRhW">
+                        <button class="sc-11485f23-13 bbGWUU">
+                            <img alt="github" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="Images/github.svg" style="color: transparent;">
+                        </button>
+                        <button class="sc-11485f23-13 bbGWUU">
+                            <img alt="google" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="Images/google.svg" style="color: transparent;">
+                        </button>
+                        <button class="sc-11485f23-13 bbGWUU">
+                            <img alt="discord" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="Images/discord.svg" style="color: transparent;">
+                        </button>
+                        <button class="sc-11485f23-13 bbGWUU">
+                            <img alt="yandex" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="Images/yandex.svg" style="color: transparent;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="locations-list">
+
+                <a href="#" class="location-item">
+                    <img src="Images/free-icon-france-330490.png" alt="Париж">
+                    <span>Париж</span>
+                </a>
+                <a href="#" class="location-item">
+                    <img src="Images/free-icon-netherlands-206615.png" alt="Амстердам">
+                    <span>Амстердам</span>
+                </a>
+                <a href="#" class="location-item">
+                    <img src="Images/free-icon-germany-555613.png" alt="Франкфурт">
+                    <span>Франкфурт</span>
+                </a>
+
+            </div>
+
+            <section class="vds-tariffs">
+                <div class="tariff-content">
+                    <div class="tariff-header">
+                        <div class="tariff-type">
+                            <span class="tariff-label">для чего?</span>
+                            <h2 class="tariff-name">Париж</h2>
+                        </div>
+                        <div class="tariff-specs">
+                            <div class="spec-item">
+                                <span>Дата-центр: Hetzner</span>
+
+                            </div>
+                            <span>Базовая DDoS-защита</span>
+
+                            <div class="spec-item">
+                                <span>1 адрес IPv4</span>
+
+
+                            </div>
+                            <span>Стоимость доп. IPv4 — 2.5 евро/мес (+7.35 евро установочный платеж в первый
+                                месяц)</span>
+
+                        </div>
+                    </div>
+
+                    <div class="tariff-plans">
+                        <div class="plan" data-plan="ALB-1">
+                            <div class="bottom-left"></div>
+                            <div class="bottom-right"></div>
+                            <div class="plan-header">
+                                <span class="plan-name2">Intel Core i7-6700</span>
+                                <div class="plan-specs">
+                                    <span>4 cores</span>
+                                    <span>64 GB RAM</span>
+                                    <span>2x512 GB rom</span>
+                                    <span>1 Gbit/s</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+                                <div class="price-per-month2">€60.07<span>/месяц</span></div>
+                            </div>
+                        </div>
+
+                        <div class="plan" data-plan="ALB-2">
+                            <div class="bottom-left"></div>
+                            <div class="bottom-right"></div>
+                            <div class="plan-header">
+                                <span class="plan-name2">AMD Ryzen 5 3600</span>
+                                <div class="plan-specs">
+                                    <span>6 cores</span>
+                                    <span>64 GB RAM</span>
+                                    <span>2x512 GB NVMe</span>
+                                    <span>1 Gbit/s</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+
+                                <div class="price-per-month2">€70.11<span>/месяц</span></div>
+                            </div>
+                        </div>
+
+                        <div class="plan" data-plan="ALB-3">
+                            <div class="bottom-left"></div>
+                            <div class="bottom-right"></div>
+                            <div class="plan-header">
+                                <span class="plan-name2">AMD Ryzen 7 3700X</span>
+                                <div class="plan-specs">
+                                    <span>8 cores</span>
+                                    <span>64 GB RAM</span>
+                                    <span>2x1.0 TB NVMe</span>
+                                    <span>1 Gbit/s
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+
+                                <div class="price-per-month2">€100.18<span>/месяц</span></div>
+                            </div>
+                        </div>
+
+                        <div class="plan" data-plan="ALB-4">
+                            <div class="bottom-left"></div>
+                            <div class="bottom-right"></div>
+                            <div class="plan-header">
+                                <span class="plan-name2">AMD Ryzen 9 5950X</span>
+                                <div class="plan-specs">
+                                    <span>16 cores</span>
+                                    <span>128 GB RAM</span>
+                                    <span>2x2.0 TB NVMe</span>
+                                    <span>10 Gbit/s</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+
+                                <div class="price-per-month2">€165.36<span>/месяц</span></div>
+                            </div>
+                        </div>
+
+                        <div class="plan" data-plan="ALB-5">
+                            <div class="bottom-left"></div>
+                            <div class="bottom-right"></div>
+                            <div class="plan-header">
+                                <span class="plan-name2">2x AMD EPYC 7702P</span>
+                                <div class="plan-specs">
+                                    <span>128 cores</span>
+                                    <span>1.0 TB RAM</span>
+                                    <span>2x3.7 TB NVMe</span>
+                                    <span>10 Gbit/s</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+
+                                <div class="price-per-month2">€300.72<span>/месяц</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <div class="discounts-block">
+                <div class="discount-info">скидка автоматически <br>применяется при <br> оформлении заказа в ЛК</div>
+                <div class="discount-percentages">
+                    <div class="discount-item">
+                        <div class="discount-value gray">5%</div>
+                        <div class="discount-period">при оплате от 3 месяцев</div>
+                    </div>
+                    <div class="discount-item">
+                        <div class="discount-value white">9%</div>
+                        <div class="discount-period">при оплате от 6 месяцев</div>
+                    </div>
+                    <div class="discount-item">
+                        <div class="discount-value orange">12%</div>
+                        <div class="discount-period">при оплате от 12 месяцев</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="os-title">операционные системы</h2>
+            <div class="os-grid">
+                <div class="os-item">
+                    <img src="Images/windows 1.svg" alt="Windows Server">
+                    <div class="os-name">Windows server</div>
+                    <div class="os-version">2022, 2019, 2016, 2012 R2</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/ubuntu 1.svg" alt="Ubuntu">
+                    <div class="os-name">Ubuntu</div>
+                    <div class="os-version">18.04, 20.04, 22.04</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/debian 1.svg" alt="Debian">
+                    <div class="os-name">debian</div>
+                    <div class="os-version">9, 10, 11, 12</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/centos 1.svg" alt="CentOS">
+                    <div class="os-name">centos</div>
+                    <div class="os-version">7, stream 8, stream 9</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/alma 1.svg" alt="AlmaLinux">
+                    <div class="os-name">almalinux</div>
+                    <div class="os-version">8, 9</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/rocky 1.svg" alt="Rocky Linux">
+                    <div class="os-name">rockylinux</div>
+                    <div class="os-version">8</div>
+                </div>
+                <div class="os-item">
+                    <img src="Images/freebsd 1.svg" alt="FreeBSD">
+                    <div class="os-name">freebsd</div>
+                    <div class="os-version">12, 13</div>
+                </div>
+            </div>
+        </main>
+
+        <img class="os-collage-image" src="Images/devices (1) 2.png" alt="OS Screens Collage">
+
+        <section class="features-section">
+            <h2 class="features-title">почему наши серверы?</h2>
+
+            <div class="features-grid">
+                <div class="feature-card" style="background-image: url('Images/Rectangle\ 67.png');">
+                    <div class="feature-content">
+                        <h3>ddos-защита</h3>
+                        <p>до 2 Тбит/с трафика очистки, до 600 Гбит/с тонкой фильтрации. Защита включена в стоимость и
+                            работает постоянно</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="background-image: url('Images/Rectangle\ 68.png');">
+                    <div class="feature-content">
+                        <h3>большой выбор</h3>
+                        <p>мы предоставляем серверы в разных локациях: бюджетные и мощные конфигурации ждут вас в России
+                            и Европе, в том числе с гарантированным интернет-соединением до 10 Гбит/с</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" style="background-image: url('Images/Rectangle\ 70.png');">
+                    <div class="feature-content">
+                        <h3>простое управление и API</h3>
+                        <p>создание и работа с серверами в личном кабинете. Автоматизация управления с помощью REST API
+                            и удобная документация</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2 class="faq-title">вопросы, ответы</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Что такое выделенный сервер?</span>
+                        <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Выделенный сервер (dedicated server) - это полноценный отдельный физический сервер, на
+                            котором клиент использует ресурсы самостоятельно, без каких-либо ограничений. Основными
+                            преимуществами выделенных серверов являются установка любого программного обеспечения,
+                            размещение крупных баз данных, развертывание сайтов и порталов, без ограничений в
+                            производительности из-за виртуализации. В зависимости от потребностей клиента, можно купить
+                            физический сервер с готовой или нестандартной конфигурацией. Если на сайте не представлен
+                            сервер с подходящими параметрами, свяжитесь с нами, мы подберем индивидуальное решение под
+                            вас.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какая используется виртуализация?</span>
+                        <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Для всех облачных серверов используется виртуализация KVM, за счет чего каждый сервер
+                            полностью изолирован от других. Вы получаете полный доступ к ядру системы и фаерволлу</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли собрать свою конфигурацию сервера?</span>
+                        <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да. Если вы не нашли подходящую для вас конфигурацию на сайте, просто свяжитесь с нами — мы
+                            можем предложить больше, чем указано на сайте, и подобрать оптимальное решение
+                            непосредственно для вашего бизнеса.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Есть ли DDoS-защита?</span>
+                        <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Конечно. AntiDDoS-защита — наш стандарт качества.
+                            Защита подключена ко всем облачным серверам, не требует дополнительных настроек и оплат,
+                            работает в постоянном режиме и фильтрует атаки до 2Tbps. Подходит для любых приложений, в
+                            том числе игровых серверов и высоконагруженных интернет-проектов. С нами вы в безопасности.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-heading">О компании</h3>
+                <div class="footer-logo">
+                    <img src="Images/black-white-logo.svg" alt="Aëtix Logo">
+                </div>
+                <p class="footer-text">Надежный хостинг-провайдер с 2020 года</p>
+                <div class="company-info">
+                    <p>Aetix International LTD</p>
+                    <p>Рег. номер: 123456789</p>
+                    <p>347 Barking Road, London</p>
+                    <p>United Kingdom</p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Виртуальные серверы</a></li>
+                    <li><a href="#">Выделенные серверы</a></li>
+                    <li><a href="#">Защита от DDoS</a></li>
+                    <li><a href="#">Резервное копирование</a></li>
+                    <li><a href="#">Мониторинг</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">База знаний</a></li>
+                    <li><a href="#">Статус серверов</a></li>
+                    <li><a href="#">Тикет-система</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Контакты</h3>
+                <p class="footer-contact"><a href="tel:88002006032">8 800 200-60-32</a></p>
+                <p class="footer-contact"><a href="mailto:support@aetix.net">support@aetix.net</a></p>
+                <p class="footer-contact"><a href="#">Telegram</a></p>
+                <div class="footer-additional">
+                    <p><a href="#">Резервное копирование</a></p>
+                    <p><a href="#">Мониторинг</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2024 aëtix. Все права защищены.</p>
+        </div>
+    </footer>
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/dedicated-servers-animations.js"></script>
+
+    <!-- Модальное окно для входа -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img src="Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Login System</h2>
+                <p>Login into your Account</p>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header">
+                    <h2>Login Account</h2>
+                    <p>Sign in to continue your progress</p>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <form class="modal-form">
+                    <div class="form-group">
+                        <label for="studentId">Login</label>
+                        <input type="text" id="studentId" name="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="password-toggle">
+                            <input type="checkbox" id="showPassword">
+                            <label for="showPassword">Show password</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="sign-in-btn">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img src="Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Registration System</h2>
+                <p>Register your Account</p>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header">
+                    <h2>Create Account</h2>
+                    <p>Fill in your details to get started</p>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <form class="modal-form">
+                    <div class="form-group">
+                        <label for="regStudentId">Username</label>
+                        <input type="text" id="regStudentId" name="regStudentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" name="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" name="regPassword" required>
+                        <div class="password-toggle">
+                            <input type="checkbox" id="showRegPassword">
+                            <label for="showRegPassword">Show password</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="sign-in-btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

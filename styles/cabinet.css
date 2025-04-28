@@ -1,0 +1,745 @@
+/* Стили для градиентных заголовков */
+.gradient-heading {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0EA5E9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Разные размеры для заголовков с градиентом */
+h2.gradient-heading {
+    font-size: 2.5rem;
+}
+   
+h3.gradient-heading {
+    font-size: 2rem;
+}
+
+h4.gradient-heading {
+    font-size: 1.5rem;
+}
+   
+p {
+    margin-bottom: 1rem;
+    color: #334155;
+}
+
+/* Стили для личного кабинета */
+
+
+.main-container {
+    padding-top: 72px;
+}
+
+.cabinet-header {
+    padding-top: 40px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #F0F9FF;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.user-avatar {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0EA5E9;
+    border-radius: 9999px;
+    color: white;
+}
+
+.user-details h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: #0F172A;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    background: none;
+}
+
+.user-details p {
+    color: #64748B;
+    font-size: 0.875rem;
+}
+
+.cabinet-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Сайдбар */
+.cabinet-sidebar {
+    background: #F0F9FF;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0 10px 15px rgba(14, 165, 233, 0.1);
+    color: #0F172A;
+    text-decoration: none;
+    
+}
+
+
+
+.menu-item.active {
+    background: #0EA5E9;
+    color: white;
+    border-radius: 8px;
+}
+
+.menu-icon {
+    font-size: 1.25rem;
+}
+
+/* Основной контент */
+.cabinet-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Секция услуг */
+.services-section {
+    background: #F0F9FF;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    color: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.services-section h2:not(.gradient-heading) {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #0F172A;
+}
+
+.services-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.service-card2 {
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px ;
+    padding: 1.5rem;
+    
+}
+
+
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.service-header h3:not(.gradient-heading) {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #0F172A;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.status.active {
+    background: #0EA5E9;
+    color: white;
+}
+
+.service-info {
+    margin-bottom: 1rem;
+}
+
+.service-info p {
+    margin: 0.5rem 0;
+    color: #334155;
+}
+
+.service-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Секция поддержки */
+.support-section {
+    background: #F0F9FF;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.support-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.support-card {
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.support-info {
+    flex: 1;
+}
+
+.support-info p {
+    margin: 0.5rem 0;
+    color: #334155;
+}
+
+.support-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.support-info li {
+    margin: 0.5rem 0;
+    color: #334155;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .cabinet-grid {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabinet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cabinet-sidebar {
+        position: sticky;
+        top: 1rem;
+        z-index: 100;
+    }
+
+    .cabinet-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .user-info {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .support-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .support-card button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-actions {
+        flex-direction: column;
+    }
+
+    .service-actions button {
+        width: 100%;
+    }
+}
+
+/* Вкладки */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Стили для карточек заказов */
+.orders-section {
+    background: #F0F9FF;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.orders-list {
+    display: grid;
+    margin-top: 24px;
+    gap: 1rem;
+}
+
+.order-card {
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.order-header h3:not(.gradient-heading) {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #0F172A;
+}
+
+/* Стили для карточек платежей */
+.payments-section {
+    background: #F0F9FF;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.payments-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment-card {
+    background: white;
+margin-top: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+
+
+.payment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.payment-header h3:not(.gradient-heading) {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #0F172A;
+}
+
+/* Стили для тикетов поддержки */
+.ticket-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ticket {
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 0 10px 15px rgba(14, 165, 233, 0.1);
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.ticket-header h4:not(.gradient-heading) {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #0F172A;
+}
+
+.ticket-date {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin-top: 0.5rem;
+}
+
+/* Статусы */
+.status.completed {
+    background: #0EA5E9;
+    color: white;
+}
+
+.status.success {
+    background: #0EA5E9;
+    color: white;
+}
+
+.status.open {
+    background: #0EA5E9;
+    color: white;
+}
+
+.status.closed {
+    background: #64748B;
+    color: white;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background: #0EA5E9;
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.1);
+}
+
+.btn-secondary {
+    background: #F0F9FF;
+    color: #0F172A;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(56, 189, 248, 0.1) 100%);
+    border-color: #38BDF8;
+}
+
+@media (max-width: 1440px) {
+    .cabinet-container {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    .user-info-section {
+        padding: 30px;
+    }
+
+    .server-list {
+        gap: 20px;
+    }
+
+    .server-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cabinet-container {
+        padding: 0 30px;
+    }
+
+    .user-info-section {
+        padding: 25px;
+    }
+
+    .server-list {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .server-card {
+        padding: 20px;
+    }
+
+    .server-info h3 {
+        font-size: 18px;
+    }
+
+    .server-specs {
+        font-size: 14px;
+    }
+
+    .server-price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cabinet-container {
+        padding: 0 24px;
+    }
+
+    .user-info-section {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .user-avatar {
+      
+        font-size: 36px;
+    }
+
+    .user-details {
+        align-items: center;
+    }
+
+    .server-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .server-card {
+        padding: 18px;
+    }
+
+    .server-info h3 {
+        font-size: 16px;
+    }
+
+    .server-specs {
+        font-size: 13px;
+    }
+
+    .server-price {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabinet-container {
+        padding: 0 20px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .user-info-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .user-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 32px;
+    }
+
+    .user-name {
+        font-size: 20px;
+    }
+
+    .user-email {
+        font-size: 14px;
+    }
+
+    .server-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 12px;
+    }
+
+    .server-card {
+        padding: 15px;
+    }
+
+    .server-status {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cabinet-container {
+        padding: 0 15px;
+    }
+
+    .page-title {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    .user-info-section {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .user-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .user-name {
+        font-size: 18px;
+    }
+
+    .user-email {
+        font-size: 13px;
+    }
+
+    .server-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .server-card {
+        padding: 12px;
+    }
+
+    .server-info h3 {
+        font-size: 15px;
+    }
+
+    .server-specs {
+        font-size: 12px;
+    }
+
+    .server-price {
+        font-size: 14px;
+    }
+
+    .server-status {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cabinet-container {
+        padding: 0 12px;
+    }
+
+    .page-title {
+        font-size: 20px;
+        margin: 12px 0;
+    }
+
+    .user-info-section {
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .user-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+    }
+
+    .user-name {
+        font-size: 16px;
+    }
+
+    .user-email {
+        font-size: 12px;
+    }
+
+    .server-card {
+        padding: 10px;
+    }
+
+    .server-info h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .server-specs {
+        font-size: 11px;
+        gap: 4px;
+    }
+
+    .server-price {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .server-status {
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+
+    .server-actions {
+        gap: 6px;
+    }
+
+    .server-action-btn {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+.mobile-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #0EA5E9;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.mobile-logout-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.mobile-logout-btn:hover {
+    background: #0284C7;
+} 

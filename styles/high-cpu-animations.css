@@ -1,0 +1,182 @@
+/* Анимации для секций */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Стили для анимированных элементов */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+}
+
+/* Анимации для конкретных секций */
+.hero-section.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pricing-section.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.features-section.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.service-card.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.advantage-card.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Задержки для последовательного появления */
+.hero-section.animate-on-scroll.visible {
+    animation-delay: 0.2s;
+}
+
+.pricing-section.animate-on-scroll.visible {
+    animation-delay: 0.4s;
+}
+
+.features-section.animate-on-scroll.visible {
+    animation-delay: 0.6s;
+}
+
+.service-card.animate-on-scroll.visible {
+    animation-delay: 0.8s;
+}
+
+.advantage-card.animate-on-scroll.visible {
+    animation-delay: 1s;
+}
+
+/* Анимации для элементов внутри секций */
+.service-card .service-title.animate-on-scroll.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.service-card .service-description.animate-on-scroll.visible {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.service-card .service-tags.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.advantage-card .advantage-icon.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.advantage-card .advantage-title.animate-on-scroll.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.advantage-card .advantage-description.animate-on-scroll.visible {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+/* Анимации для таблицы тарифов */
+.pricing-table.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pricing-table-row.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pricing-feature.animate-on-scroll.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* Анимации для кнопок */
+.cta-button.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для заголовков */
+.section-title.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для описаний */
+.section-description.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для иконок */
+.icon.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для списков */
+.feature-list.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.feature-list-item.animate-on-scroll.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* Анимации для карточек преимуществ */
+.benefit-card.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для статистики */
+.stat-item.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для отзывов */
+.testimonial.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для FAQ */
+.faq-item.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для контактной формы */
+.contact-form.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Анимации для футера */
+.footer-section.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+} 

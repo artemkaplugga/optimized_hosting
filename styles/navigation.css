@@ -1,0 +1,108 @@
+/* Navigation Styles */
+.nav-item-dropdown {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 1000;
+}
+
+.nav-item-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    padding: 8px 0 !important;
+    min-width: 250px !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+    z-index: 1000 !important;
+    margin-top: 5px !important;
+    pointer-events: auto !important;
+    display: block !important;
+}
+
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown:focus .dropdown-menu,
+.nav-item-dropdown:focus-within .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: block !important;
+}
+
+.dropdown-menu.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: block !important;
+}
+
+.dropdown-link {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.dropdown-link::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 3px !important;
+    background: #007bff !important;
+    transform: scaleY(0) !important;
+    transition: transform 0.15s ease !important;
+}
+
+.dropdown-link:hover {
+    background-color: #f8f9fa !important;
+    padding-left: 20px !important;
+}
+
+.dropdown-link:hover::before {
+    transform: scaleY(1) !important;
+}
+
+.dropdown-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 12px !important;
+    opacity: 0.8 !important;
+}
+
+.arrow-down {
+    width: 10px;
+    height: 6px;
+    transition: transform 0.15s ease;
+}
+
+.nav-item-dropdown:hover .arrow-down {
+    transform: rotate(180deg);
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-link:hover {
+    color: #007bff;
+} 

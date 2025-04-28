@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aëtix</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <!-- Дополнительные стили для выпадающего меню -->
+    
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-container">
+                <div class="left-section">
+                    <div class="logo">
+                        <a href="index.html">
+                        <img src="./Images/logo.svg" alt="Aëtix Logo">
+                    </a>
+                    </div>
+                    <nav class="main-nav">
+                        <div class="nav-group">
+                            <div class="nav-item-dropdown">
+                                <div class="dropdown-toggle" tabindex="0">
+                                    <span>услуги</span>
+                                    <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-menu" id="services-menu">
+                                    <a href="tarifs.html" class="dropdown-link">
+                                        <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        Виртуальные серверы
+                                    </a>
+                                    <a href="high_cpu.html" class="dropdown-link">
+                                        <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        HIGH-CPU серверы
+                                    </a>
+                                    <a href="dedicated-servers.html" class="dropdown-link">
+                                        <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        Выделенные серверы
+                                    </a>
+                                    <a href="storage_vps.html" class="dropdown-link">
+                                        <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        storage VPS
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="contact.html" class="nav-link">информация</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="auth-links">
+                    <a href="#" class="auth-link" id="loginBtn">вход</a>
+                    <span class="auth-separator">/</span>
+                    <a href="#" class="auth-link" id="registerBtn">регистрация</a>
+                    <!-- Добавляем профиль пользователя -->
+                    <div class="user-profile" id="userProfile">
+                        <div class="user-avatar" id="userAvatar">
+                            <!-- Инициалы пользователя будут добавлены через JavaScript -->
+                        </div>
+                        <div class="user-menu">
+                            <div class="user-menu-header">
+                                <div class="user-name"></div>
+                                <div class="user-email"></div>
+                            </div>
+                            <div class="user-menu-items">
+                                <a href="cabinet.html" class="user-menu-item">
+                                            <svg viewBox="0 0 24 24">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                    Личный кабинет
+                                </a>
+                               
+                                <a href="#" class="user-menu-item logout-item" id="logoutBtn">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                                    </svg>
+                                    Выйти
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- Мобильное меню -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav-menu">
+                    <div class="mobile-nav-item">
+                        <button class="mobile-dropdown-toggle">
+                            <span>услуги</span>
+                            <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-menu">
+                            <a href="tarifs.html" class="mobile-dropdown-link">
+                                <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                Виртуальные серверы
+                            </a>
+                            <a href="high_cpu.html" class="mobile-dropdown-link">
+                                <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                HIGH-CPU серверы
+                            </a>
+                            <a href="dedicated-servers.html" class="mobile-dropdown-link">
+                                <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                Выделенные серверы
+                            </a>
+                            <a href="storage_vps.html" class="mobile-dropdown-link">
+                                <img src="./Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                storage VPS
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="contact.html" class="mobile-nav-link">информация</a>
+                    </div>
+                </nav>
+                <div class="mobile-auth-buttons">
+                    <a href="#" class="login-btn" id="mobileLoginBtn">вход</a>
+                    <a href="#" class="signup-btn" id="mobileRegisterBtn">регистрация</a>
+                </div>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-video-container">
+                <!-- Replace this with your actual video path -->
+                <video class="hero-background-video" autoplay loop muted playsinline>
+                    <source src="./videos/cloudvps_video_background (1).mp4" type="video/mp4">
+                    <!-- Fallback image if video doesn't load -->
+                    <img src="./Images/Rectangle 36.png" alt="Cloud Technology">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div class="hero-badge">NEXT GEN</div>
+                    <h1 class="hero-title">CLOUD INFRASTRUCTURE</h1>
+                    <div class="hero-tagline">POWER · SECURITY · EFFICIENCY</div>
+                </div>
+                
+                <div class="hero-main-title">AËTIX CLOUD</div>
+                
+                <div class="hero-footer-wrapper">
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-text">Там, где данные летают, а решения принимаются за секунды.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-footer">
+                        <div class="hero-credit">CLOUD TECHNOLOGY • DEDICATED SERVERS</div>
+                        <div class="hero-info">Enterprise-grade infrastructure at your fingertips</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="spacer">
+            <img src="./videos/Flow 1512p-25fps.gif" alt="Cloud Hosting Animation" style="width: 100%; height: auto; display: block;" />
+        </section>
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slider">
+                    <div class="slide-particles"></div>
+                    <div class="slider-container" style="background-image: url('Images/Rectangle\ 36.png');">
+                        <div class="slider-content">
+                            <h2 class="slider-title">Защита от DDOS атак</h2>
+                            <p class="slider-description">
+                                До 2Тбит/с трафика очистки, до 600Гбит/с тонкой фильтрации. <br>
+                                Защита включена в стоимость и работает постоянно
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider_Two">
+                    <div class="slide-particles"></div>
+                    <div class="slider-container" style="background-image: url('Images/Rectangle\ 41.png');">
+                        <div class="slider-content">
+                            <h2 class="slider-title">Облачные Серверы VDS</h2>
+                            <p class="slider-description">
+                                Виртуальные серверы на мощных процессорах AMD <br> и NVMe SSD накопителях
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider_Three">
+                    <div class="slide-particles"></div>
+                    <div class="slider-container" style="background-image: url('Images/Rectangle\ 40.png');">
+                        <div class="slider-content">
+                            <h2 class="slider-title">HIGH-CPU Серверы</h2>
+                            <p class="slider-description">
+                                Самые мощные виртуальные серверы на базе <br> AMD Ryzen Threadripper 3990X и Intel Core i9-12900K
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <section class="hosting-promo" id="hosting-details">
+            <div class="clouds-animation" id="clouds-container"></div>
+            <div class="hosting-promo-container">
+                <h2 class="hosting-promo-title">Хостинг aëtix</h2>
+                <p class="hosting-promo-subtitle">Надежный хостинг для ваших проектов</p>
+                <div class="hosting-promo-box">
+                    <p class="hosting-promo-price">от €5.68/месяц</p>
+                    <ul class="hosting-promo-features">
+                        <li>Мгновенное развертывание</li>
+                        <li>Защита от DDoS-атак</li>
+                        <li>SSD-накопители</li>
+                        <li>Круглосуточная поддержка</li>
+                    </ul>
+                    <a href="tarifs.html" class="hosting-promo-button">Выбрать тариф</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-strip">
+            <div class="feature-box">
+                <p class="feature-value">99.9%</p>
+                <p class="feature-label">Время работы</p>
+            </div>
+            <div class="feature-box">
+                <p class="feature-value">24/7</p>
+                <p class="feature-label">Поддержка</p>
+            </div>
+            <div class="feature-box">
+                <p class="feature-value">10 Гбит/с</p>
+                <p class="feature-label">Скорость</p>
+            </div>
+            <div class="feature-box">
+                <p class="feature-value">5 мин</p>
+                <p class="feature-label">Установка</p>
+            </div>
+        </section>
+
+        <section class="services-overview">
+            <div class="service-card" style="background-image: url('./Images/cloudhosting.png');">
+                <div>
+                    <h3 class="service-title">Облачные серверы</h3>
+                    <p class="service-description">Виртуальные серверы на SSD</p>
+                </div>
+                <div class="service-tags">
+                    <span class="service-tag">CentOS</span>
+                    <span class="service-tag">Debian</span>
+                    <span class="service-tag">Ubuntu</span>
+                </div>
+                <a href="#" class="card-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card" style="background-image: url('./Images/ryzen.png');">
+                <div>
+                    <h3 class="service-title">Выделенные<br>серверы</h3>
+                    <p class="service-description">Мощные серверы для проектов</p>
+                </div>
+                <div class="service-tags">
+                    <span class="service-tag">Root-доступ</span>
+                    <span class="service-tag">Raid</span>
+                    <span class="service-tag">Мониторинг</span>
+                </div>
+                <a href="#" class="card-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card" style="background-image: url('./Images/ddos.png');">
+                <div>
+                    <h3 class="service-title">Защита</h3>
+                    <p class="service-description">Защита от DDoS-атак</p>
+                </div>
+                <div class="service-tags">
+                    <span class="service-tag">AntiDDoS</span>
+                    <span class="service-tag">Фильтрация</span>
+                    <span class="service-tag">WAF</span>
+                </div>
+                <a href="#" class="card-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card" style="background-image: url('./Images/storage.0db926e8.svg');">
+                <div>
+                    <h3 class="service-title">storage vps</h3>
+                    <p class="service-description">лучшее решение для хранения больших данных, бекапов и медиа-файлов</p>
+                </div>
+                <div class="service-tags">
+                    <span class="service-tag">backup</span>
+                    <span class="service-tag">photos</span>
+                    <span class="service-tag">your extra large files</span>
+                </div>
+                <a href="#" class="card-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card" style="background-image: url('./Images/hi-cpu.svg');">
+                <div>
+                    <h3 class="service-title">премиум<br>hi-cpu сервера</h3>
+                    <p class="service-description">виртуальные сервера с предельными вычислительными мощностями</p>
+                </div>
+                <div class="service-tags">
+                    <span class="service-tag">AMD Ryzen</span>
+                    <span class="service-tag">Intel Core i9</span>
+                    <span class="service-tag">High Performance</span>
+                </div>
+                <a href="#" class="card-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="why-aetix">
+            <h2 class="section-title">Почему aëtix?</h2>
+            <div class="advantages-container">
+                <div class="advantage-card" style="background-image: url('./Images/first.png');">
+                    <div class="advantage-icon">
+                        <img src="./Images/chat.svg" alt="Иконка чата">
+                    </div>
+                    <h3 class="advantage-title">Поддержка</h3>
+                    <p class="advantage-description">Быстрые ответы в чате</p>
+                </div>
+                <div class="advantage-card" style="background-image: url('./Images/second.png');">
+                    <div class="advantage-icon">
+                        <img src="./Images/backup.svg" alt="Иконка бэкапа">
+                    </div>
+                    <h3 class="advantage-title">Бэкапы</h3>
+                    <p class="advantage-description">Резервное копирование</p>
+                </div>
+                <div class="advantage-card" style="background-image: url('./Images/third.png');">
+                    <div class="advantage-icon">
+                        <img src="./Images/pay.svg" alt="Иконка оплаты">
+                    </div>
+                    <h3 class="advantage-title">Оплата</h3>
+                    <p class="advantage-description">Почасовая оплата</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                
+                <div class="video-wrapper">
+                    <a href="videos/Project 5.mp4" data-fancybox="video-gallery" class="video-thumbnail">
+                        <img src="Images/unnamed.jpg" alt="Video thumbnail">
+                        <div class="play-button">
+                            <svg width="68" height="48" viewBox="0 0 68 48">
+                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer2">
+            <div class="footer-container2">
+                <div class="footer-column">
+                    <h3 class="footer-heading">О компании</h3>
+                    <div class="footer-logo">
+                        <img src="./Images/black-white-logo.svg" alt="Aëtix Logo">
+                    </div>
+                    <p class="footer-text">Надежный хостинг-провайдер с 2020 года</p>
+                    <div class="company-info">
+                        <p>Aetix International LTD</p>
+                        <p>Рег. номер: 123456789</p>
+                        <p>347 Barking Road, London</p>
+                        <p>United Kingdom</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Услуги</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Виртуальные серверы</a></li>
+                        <li><a href="#">Выделенные серверы</a></li>
+                        <li><a href="#">Защита от DDoS</a></li>
+                        <li><a href="#">Резервное копирование</a></li>
+                        <li><a href="#">Мониторинг</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">База знаний</a></li>
+                        <li><a href="#">Статус серверов</a></li>
+                        <li><a href="#">Тикет-система</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Контакты</h3>
+                    <p class="footer-contact"><a href="tel:88002006032">8 800 200-60-32</a></p>
+                    <p class="footer-contact"><a href="mailto:support@aetix.net">support@aetix.net</a></p>
+                    <p class="footer-contact"><a href="#">Telegram</a></p>
+                    <div class="footer-additional">
+                        <p><a href="#">Резервное копирование</a></p>
+                        <p><a href="#">Мониторинг</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 aëtix. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальные окна (оставляем вне контейнера) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img src="./Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Login System</h2>
+                <p>Login into your Account</p>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header">
+                    <h2>Login Account</h2>
+                    <p>Sign in to continue your progress</p>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <form class="modal-form">
+                    <div class="form-group">
+                        <label for="studentId">Login</label>
+                        <input type="text" id="studentId" name="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="password-toggle">
+                            <input type="checkbox" id="showPassword">
+                            <label for="showPassword">Show password</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="sign-in-btn">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img src="./Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Registration System</h2>
+                <p>Register your Account</p>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header">
+                    <h2>Create Account</h2>
+                    <p>Fill in your details to get started</p>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <form class="modal-form">
+                    <div class="form-group">
+                        <label for="regStudentId">Username</label>
+                        <input type="text" id="regStudentId" name="regStudentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" name="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" name="regPassword" required>
+                        <div class="password-toggle">
+                            <input type="checkbox" id="showRegPassword">
+                            <label for="showRegPassword">Show password</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="sign-in-btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="./scripts/navigation.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h2 class="brand-title">AETIX</h2>
+                <button class="mobile-menu-close" aria-label="Close menu">×</button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
