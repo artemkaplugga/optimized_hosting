@@ -419,6 +419,21 @@
     .header.menu-open .mobile-menu-toggle span:nth-child(3) {
         transform: translateY(-6px) rotate(-45deg);
     }
+
+    .header {
+        padding: 0 15px;
+        height: 70px;
+    }
+    
+    .header-container {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    
+    .header .logo a img {
+        height: 32px;
+        width: auto;
+    }
 }
 
 @media (max-width: 576px) {

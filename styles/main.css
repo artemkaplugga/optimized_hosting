@@ -1454,6 +1454,8 @@
     }
     .hero-main-title {
         font-size: 70px;
+        margin: 20px 0;
+        line-height: 1;
     }
     .hero-stats {
         flex-direction: column;
@@ -1470,6 +1472,10 @@
     .hero-info {
         text-align: center;
     }
+    .hero-stat {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1482,9 +1488,22 @@
     }
     .hero-main-title {
         font-size: 50px;
+        margin: 15px 0;
     }
     .hero-stat {
         width: 100%;
+        max-width: 280px;
+    }
+    .hero-stat-text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-main-title {
+        font-size: 40px;
+        margin: 10px 0;
     }
 }
 
