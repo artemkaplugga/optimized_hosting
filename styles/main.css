@@ -77,13 +77,8 @@
 
 .hero-title {
     font-size: 64px;
-    font-weight: 800;
     color: #fff;
-    line-height: 1.1;
-    margin: 0;
     margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     text-shadow: 0 0 15px rgba(0, 204, 255, 1);
 }
 
@@ -1445,8 +1440,6 @@
 
     .hero-title {
         font-size: 42px;
-        letter-spacing: 0.8px;
-        line-height: 1.1;
         margin-bottom: 12px;
     }
 
@@ -1502,8 +1495,6 @@
 
     .hero-title {
         font-size: 36px;
-        letter-spacing: 0.6px;
-        line-height: 1;
         margin-bottom: 10px;
     }
 
@@ -1518,7 +1509,6 @@
 @media (max-width: 375px) {
     .hero-title {
         font-size: 28px;
-        letter-spacing: 0.5px;
         margin-bottom: 8px;
     }
 
