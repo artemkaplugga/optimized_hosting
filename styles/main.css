@@ -1365,6 +1365,46 @@
     .footer-column {
         flex: 0 0 calc(50% - 20px);
     }
+    
+    /* Оптимизация анимаций для мобильных устройств */
+    .hero-stat,
+    .feature-box,
+    .advantage-card {
+        will-change: transform;
+    }
+    
+    /* Упрощаем анимации для повышения производительности */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Сокращаем количество анимаций */
+    .slide-particles::before,
+    .slide-particles::after {
+        animation-play-state: paused;
+    }
+    
+    /* Уменьшаем количество теней */
+    .swiper-button-next,
+    .swiper-button-prev {
+        box-shadow: none;
+    }
+    
+    .swiper-pagination-bullet-active {
+        box-shadow: none;
+    }
+    
+    /* Уменьшаем сложность градиентов */
+    .hosting-promo {
+        background: #f0f5ff;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2576,5 +2616,38 @@
 }
 
 /* Заменяем все font-family на переменные */
+
+/* Оптимизация шрифтов */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+}
 
 

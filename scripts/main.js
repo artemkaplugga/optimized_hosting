@@ -1,5 +1,34 @@
 // Swiper initialization code will go here 
 
+// Определяем, используется ли мобильное устройство
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Функция для отложенной загрузки скриптов
+function loadScriptAsync(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
+
+// Оптимизации для мобильных устройств
+if (isMobile) {
+    // Уменьшаем количество анимаций
+    document.querySelectorAll('.slide-particles').forEach(el => {
+        el.style.display = 'none';
+    });
+    
+    // Упрощаем градиенты
+    document.querySelectorAll('.hosting-promo').forEach(el => {
+        el.style.backgroundImage = 'none';
+        el.style.backgroundColor = '#f0f5ff';
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Header scroll effect
     const header = document.querySelector('.header');
@@ -13,23 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Инициализация Swiper
-    const swiper = new Swiper('.mySwiper', {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    // Отложенная загрузка дополнительных скриптов для улучшения метрик
+    setTimeout(() => {
+        // Загружаем скрипты, которые не нужны сразу
+        loadScriptAsync('https://unpkg.com/swiper/swiper-bundle.min.js')
+            .then(() => {
+                initializeSwiper();
+            })
+            .catch(err => console.error('Failed to load Swiper:', err));
+    }, 1000);
 
     // Handle video background
     const videoElement = document.querySelector('.hero-background-video');
@@ -270,3 +291,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 }); 
+
+// Функция инициализации Swiper
+function initializeSwiper() {
+    // Проверяем, загружен ли Swiper
+    if (typeof Swiper !== 'undefined') {
+        // Упрощенные настройки для мобильных устройств
+        const swiperOptions = isMobile ? {
+            speed: 800,
+            spaceBetween: 20,
+            autoplay: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        } : {
+            // Полные настройки для десктопа
+            speed: 800,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        };
+
+        // Инициализируем Swiper
+        const swiper = new Swiper('.swiper', swiperOptions);
+    }
+} 

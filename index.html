@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Aëtix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles/navigation.css">
@@ -19,7 +21,7 @@
                 <div class="left-section">
                     <div class="logo">
                         <a href="index.html">
-                        <img src="./Images/logo.svg" alt="Aëtix Logo">
+                        <img src="./Images/logo.svg" alt="Aëtix Logo" width="120" height="40" loading="eager">
                     </a>
                     </div>
                     <nav class="main-nav">
@@ -141,7 +143,7 @@
                 <video class="hero-background-video" autoplay loop muted playsinline>
                     <source src="./videos/cloudvps_video_background (1).mp4" type="video/mp4">
                     <!-- Fallback image if video doesn't load -->
-                    <img src="./Images/Rectangle 36.png" alt="Cloud Technology">
+                    <img src="./Images/Rectangle 36.png" alt="Cloud Technology" loading="lazy">
                 </video>
                 <div class="video-overlay"></div>
             </div>
@@ -171,7 +173,7 @@
         </section>
         
         <section class="spacer">
-            <img src="./videos/Flow 1512p-25fps.gif" alt="Cloud Hosting Animation" style="width: 100%; height: auto; display: block;" />
+            <img src="./videos/Flow 1512p-25fps.gif" alt="Cloud Hosting Animation" style="width: 100%; height: auto; display: block;" loading="lazy" />
         </section>
         <!-- Slider main container -->
         <div class="swiper mySwiper">
@@ -371,7 +373,7 @@
                 
                 <div class="video-wrapper">
                     <a href="videos/Project 5.mp4" data-fancybox="video-gallery" class="video-thumbnail">
-                        <img src="Images/unnamed.jpg" alt="Video thumbnail">
+                        <img src="Images/unnamed.jpg" alt="Video thumbnail" loading="lazy">
                         <div class="play-button">
                             <svg width="68" height="48" viewBox="0 0 68 48">
                                 <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
@@ -388,7 +390,7 @@
                 <div class="footer-column">
                     <h3 class="footer-heading">О компании</h3>
                     <div class="footer-logo">
-                        <img src="./Images/black-white-logo.svg" alt="Aëtix Logo">
+                        <img src="./Images/black-white-logo.svg" alt="Aëtix Logo" width="120" height="40" loading="eager">
                     </div>
                     <p class="footer-text">Надежный хостинг-провайдер с 2020 года</p>
                     <div class="company-info">
@@ -505,9 +507,9 @@
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="./scripts/navigation.js"></script>
-    <script src="./scripts/header.js"></script>
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/header.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
     <!-- Mobile Menu -->
