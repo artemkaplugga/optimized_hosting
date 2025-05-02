@@ -65,7 +65,7 @@
     top: 0 !important;
     height: 100% !important;
     width: 3px !important;
-    background: #007bff !important;
+    background: #38BDF8 !important;
     transform: scaleY(0) !important;
     transition: transform 0.15s ease !important;
 }
@@ -104,5 +104,5 @@
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #38BDF8;
 } 

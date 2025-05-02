@@ -76,7 +76,6 @@
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
-    padding: 8px 12px;
     border-radius: 8px;
     position: relative;
     white-space: nowrap;
@@ -134,7 +133,7 @@
 
 .signup-btn {
     padding: 10px 20px;
-    background: #38BDF8;
+    background: #00CCFF;
     color: white;
     text-decoration: none;
     font-size: 15px;
@@ -146,7 +145,7 @@
 }
 
 .signup-btn:hover {
-    background: #0EA5E9;
+    background: #00CCFF;
     border-color: #0EA5E9;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
@@ -185,6 +184,44 @@
 /* Dropdown styles */
 .nav-item-dropdown {
     position: relative;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #38BDF8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.dropdown-toggle:hover::after,
+.nav-item-dropdown:hover .dropdown-toggle::after {
+    width: 100%;
+}
+
+
+
+.nav-item-dropdown:hover .dropdown-toggle span {
+    color: #38BDF8;
+}
+
+.nav-item-dropdown:hover .arrow-down path {
+    stroke: #38BDF8;
 }
 
 .dropdown-link {
@@ -202,6 +239,7 @@
 
 .dropdown-link:hover {
     background: #f2f7ff;
+    color: #0031A4;
 }
 
 .dropdown-icon {
@@ -237,7 +275,6 @@
 
     .nav-link {
         font-size: 14px;
-        padding: 7px 10px;
     }
 
     .login-btn,
@@ -262,7 +299,6 @@
 
     .nav-link {
         font-size: 13px;
-        padding: 6px 8px;
     }
 
     .login-btn,
@@ -542,10 +578,28 @@
     text-decoration: none;
     font-size: 16px;
     text-transform: lowercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.auth-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #38BDF8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .auth-link:hover {
-    opacity: 0.8;
+    color: #38BDF8;
+}
+
+.auth-link:hover::after {
+    width: 100%;
 }
 
 .auth-separator {
@@ -658,7 +712,7 @@
 }
 
 .sign-in-btn {
-    background: #007bff;
+    background: #00CCFF;
     color: white;
     border: none;
     padding: 12px;
@@ -669,7 +723,7 @@
 }
 
 .sign-in-btn:hover {
-    background: #0056b3;
+    background: #005cbe;
 }
 
 /* Адаптивные стили для модальных окон */
@@ -927,7 +981,7 @@
 
     .nav-link {
         font-size: 13px;
-        padding: 6px 8px;
+      
     }
 
     .header-left {
