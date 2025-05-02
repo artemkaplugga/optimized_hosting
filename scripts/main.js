@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     const header = document.querySelector('.header');
@@ -14,13 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    setTimeout(() => {
-        loadScriptAsync('https://unpkg.com/swiper/swiper-bundle.min.js')
-            .then(() => {
-                initializeSwiper();
-            })
-            .catch(err => console.error('Failed to load Swiper:', err));
-    }, 1000);
+    initializeSwiper();
 
     const sections = document.querySelectorAll('.hosting-promo, .features-strip, .services-overview, .why-aetix');
     
@@ -212,15 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function initializeSwiper() {
     if (typeof Swiper !== 'undefined') {
-        const swiperOptions = isMobile ? {
-            speed: 800,
-            spaceBetween: 20,
-            autoplay: false,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        } : {
+        const swiperOptions = {
             speed: 800,
             spaceBetween: 30,
             autoplay: {
@@ -236,7 +219,6 @@ function initializeSwiper() {
                 prevEl: '.swiper-button-prev'
             }
         };
-
         const swiper = new Swiper('.swiper', swiperOptions);
     }
 } 
