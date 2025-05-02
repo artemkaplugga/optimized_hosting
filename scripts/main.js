@@ -327,3 +327,22 @@ function initializeSwiper() {
         const swiper = new Swiper('.swiper', swiperOptions);
     }
 } 
+  // Video optimization based on device type
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if the device is mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    if (!isMobile) {
+        // Only load the video on desktop devices
+        const videoElement = document.querySelector('.hero-background-video');
+        if (videoElement) {
+            const sourceElement = videoElement.querySelector('source');
+            if (sourceElement) {
+                // Lazy load the video on desktop
+                const videoSrc = sourceElement.getAttribute('src');
+                sourceElement.setAttribute('src', videoSrc);
+                videoElement.load();
+            }
+        }
+    }
+});

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <!-- Preload hero background image -->
+    <link rel="preload" href="./Images/cloud-video-poster.webp" as="image">
     <!-- Дополнительные стили для выпадающего меню -->
     
 </head>
@@ -145,6 +147,8 @@
                     <!-- Fallback image if video doesn't load -->
                     <img src="./Images/Rectangle 36.png" alt="Cloud Technology" loading="lazy">
                 </video>
+             
+                <img src="./Images/cloud-video-poster.webp" alt="Cloud Technology" loading="lazy" class="mobile-hero-background">
                 <div class="video-overlay"></div>
             </div>
             
