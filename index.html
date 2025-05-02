@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Aëtix</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-    <!-- Preload hero background image -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="preload" href="./Images/cloud-video-poster.webp" as="image">
-    <!-- Дополнительные стили для выпадающего меню -->
-    
+
 </head>
+
 <body>
     <div class="main-container">
         <header class="header">
@@ -23,8 +21,8 @@
                 <div class="left-section">
                     <div class="logo">
                         <a href="index.html">
-                        <img src="./Images/logo.svg" alt="Aëtix Logo" width="120" height="40" loading="eager">
-                    </a>
+                            <img src="./Images/logo.svg" alt="Aëtix Logo" width="120" height="40" loading="eager">
+                        </a>
                     </div>
                     <nav class="main-nav">
                         <div class="nav-group">
@@ -32,7 +30,7 @@
                                 <div class="dropdown-toggle" tabindex="0">
                                     <span>услуги</span>
                                     <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
-                                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none" />
                                     </svg>
                                 </div>
                                 <div class="dropdown-menu" id="services-menu">
@@ -60,15 +58,13 @@
                         </div>
                     </nav>
                 </div>
-                
+
                 <div class="auth-links">
                     <a href="#" class="auth-link" id="loginBtn">вход</a>
                     <span class="auth-separator">/</span>
                     <a href="#" class="auth-link" id="registerBtn">регистрация</a>
-                    <!-- Добавляем профиль пользователя -->
                     <div class="user-profile" id="userProfile">
                         <div class="user-avatar" id="userAvatar">
-                            <!-- Инициалы пользователя будут добавлены через JavaScript -->
                         </div>
                         <div class="user-menu">
                             <div class="user-menu-header">
@@ -77,15 +73,17 @@
                             </div>
                             <div class="user-menu-items">
                                 <a href="cabinet.html" class="user-menu-item">
-                                            <svg viewBox="0 0 24 24">
-                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                     </svg>
                                     Личный кабинет
                                 </a>
-                               
+
                                 <a href="#" class="user-menu-item logout-item" id="logoutBtn">
                                     <svg viewBox="0 0 24 24">
-                                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                                        <path
+                                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
                                     </svg>
                                     Выйти
                                 </a>
@@ -99,14 +97,13 @@
                     <span></span>
                 </button>
             </div>
-            <!-- Мобильное меню -->
             <div class="mobile-menu">
                 <nav class="mobile-nav-menu">
                     <div class="mobile-nav-item">
                         <button class="mobile-dropdown-toggle">
                             <span>услуги</span>
                             <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none" />
                             </svg>
                         </button>
                         <div class="mobile-dropdown-menu">
@@ -138,7 +135,7 @@
                 </div>
             </div>
         </header>
-        
+
         <section class="hero">
             <div class="hero-video-container">
                 <!-- Replace this with your actual video path -->
@@ -147,27 +144,28 @@
                     <!-- Fallback image if video doesn't load -->
                     <img src="./Images/Rectangle 36.png" alt="Cloud Technology" loading="lazy">
                 </video>
-             
-                <img src="./Images/cloud-video-poster.webp" alt="Cloud Technology" loading="lazy" class="mobile-hero-background">
+
+                <img src="./Images/cloud-video-poster.webp" alt="Cloud Technology" loading="lazy"
+                    class="mobile-hero-background">
                 <div class="video-overlay"></div>
             </div>
-            
+
             <div class="hero-content">
                 <div class="hero-header">
                     <div class="hero-badge">NEXT GEN</div>
                     <h1 class="hero-title">CLOUD INFRASTRUCTURE</h1>
                     <div class="hero-tagline">POWER · SECURITY · EFFICIENCY</div>
                 </div>
-                
+
                 <div class="hero-main-title">AËTIX CLOUD</div>
-                
+
                 <div class="hero-footer-wrapper">
                     <div class="hero-stats">
                         <div class="hero-stat">
                             <div class="hero-stat-text">Там, где данные летают, а решения принимаются за секунды.</div>
                         </div>
                     </div>
-                    
+
                     <div class="hero-footer">
                         <div class="hero-credit">CLOUD TECHNOLOGY • DEDICATED SERVERS</div>
                         <div class="hero-info">Enterprise-grade infrastructure at your fingertips</div>
@@ -175,14 +173,13 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="spacer">
-            <img src="./videos/Flow 1512p-25fps.gif" alt="Cloud Hosting Animation" style="width: 100%; height: auto; display: block;" loading="lazy" />
+            <img src="./videos/Flow 1512p-25fps.gif" alt="Cloud Hosting Animation"
+                style="width: 100%; height: auto; display: block;" loading="lazy" />
         </section>
-        <!-- Slider main container -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide slider">
                     <div class="slide-particles"></div>
                     <div class="slider-container" style="background-image: url('Images/Rectangle\ 36.webp');">
@@ -212,15 +209,14 @@
                         <div class="slider-content">
                             <h2 class="slider-title">HIGH-CPU Серверы</h2>
                             <p class="slider-description">
-                                Самые мощные виртуальные серверы на базе <br> AMD Ryzen Threadripper 3990X и Intel Core i9-12900K
+                                Самые мощные виртуальные серверы на базе <br> AMD Ryzen Threadripper 3990X и Intel Core
+                                i9-12900K
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
@@ -275,7 +271,8 @@
                 </div>
                 <a href="#" class="card-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -291,7 +288,8 @@
                 </div>
                 <a href="#" class="card-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -307,14 +305,16 @@
                 </div>
                 <a href="#" class="card-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
             <div class="service-card" style="background-image: url('./Images/storage.0db926e8.svg');">
                 <div>
                     <h3 class="service-title">storage vps</h3>
-                    <p class="service-description">лучшее решение для хранения больших данных, бекапов и медиа-файлов</p>
+                    <p class="service-description">лучшее решение для хранения больших данных, бекапов и медиа-файлов
+                    </p>
                 </div>
                 <div class="service-tags">
                     <span class="service-tag">backup</span>
@@ -323,7 +323,8 @@
                 </div>
                 <a href="#" class="card-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -339,7 +340,8 @@
                 </div>
                 <a href="#" class="card-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -374,13 +376,15 @@
 
         <section class="video-section">
             <div class="container">
-                
+
                 <div class="video-wrapper">
                     <a href="videos/Project 5.mp4" data-fancybox="video-gallery" class="video-thumbnail">
                         <img src="Images/unnamed.jpg" alt="Video thumbnail" loading="lazy">
                         <div class="play-button">
                             <svg width="68" height="48" viewBox="0 0 68 48">
-                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                                <path
+                                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                    fill="#f00"></path>
                                 <path d="M 45,24 27,14 27,34" fill="#fff"></path>
                             </svg>
                         </div>
@@ -394,7 +398,8 @@
                 <div class="footer-column">
                     <h3 class="footer-heading">О компании</h3>
                     <div class="footer-logo">
-                        <img src="./Images/black-white-logo.svg" alt="Aëtix Logo" width="120" height="40" loading="eager">
+                        <img src="./Images/black-white-logo.svg" alt="Aëtix Logo" width="120" height="40"
+                            loading="eager">
                     </div>
                     <p class="footer-text">Надежный хостинг-провайдер с 2020 года</p>
                     <div class="company-info">
@@ -440,8 +445,6 @@
             </div>
         </footer>
     </div>
-
-    <!-- Модальные окна (оставляем вне контейнера) -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <div class="modal-left">
@@ -516,7 +519,6 @@
     <script src="./scripts/header.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-content">
             <div class="mobile-menu-header">
@@ -532,4 +534,5 @@
         </div>
     </div>
 </body>
+
 </html>

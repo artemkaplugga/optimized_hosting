@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Функция для проверки видимости элемента
+
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
 
-    // Функция для проверки видимости элемента с отступом
+   
     function isElementInViewportWithOffset(el, offset = 100) {
         const rect = el.getBoundingClientRect();
         return (
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
 
-    // Функция для добавления класса visible к элементам
+ 
     function handleScroll() {
         const elements = document.querySelectorAll('.animate-on-scroll');
         
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Добавляем класс animate-on-scroll ко всем секциям и элементам
     const sections = document.querySelectorAll('section');
     const cards = document.querySelectorAll('.service-card, .advantage-card, .benefit-card');
     const titles = document.querySelectorAll('.section-title, .service-title, .advantage-title');
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('.contact-form');
     const footers = document.querySelectorAll('.footer-section');
 
-    // Объединяем все элементы в один массив
     const allElements = [
         ...sections,
         ...cards,
@@ -54,15 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
         ...footers
     ];
 
-    // Добавляем класс animate-on-scroll ко всем элементам
     allElements.forEach(element => {
         element.classList.add('animate-on-scroll');
     });
 
-    // Обработчик события прокрутки
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleScroll);
 
-    // Инициализация при загрузке страницы
     handleScroll();
 }); 

@@ -1,4 +1,4 @@
-/* Стили для градиентных заголовков */
+
 .gradient-heading {
     background: linear-gradient(135deg, #0EA5E9 0%, #0EA5E9 100%);
     -webkit-background-clip: text;
@@ -10,7 +10,6 @@
     margin-bottom: 1rem;
 }
 
-/* Разные размеры для заголовков с градиентом */
 h2.gradient-heading {
     font-size: 2.5rem;
 }
@@ -28,7 +27,6 @@ p {
     color: #334155;
 }
 
-/* Стили для личного кабинета */
 
 
 .main-container {
@@ -123,14 +121,13 @@ p {
     font-size: 1.25rem;
 }
 
-/* Основной контент */
+
 .cabinet-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* Секция услуг */
 .services-section {
     background: #F0F9FF;
     border: 1px solid rgba(148, 163, 184, 0.1);
@@ -198,7 +195,6 @@ p {
     gap: 1rem;
 }
 
-/* Секция поддержки */
 .support-section {
     background: #F0F9FF;
     border: 1px solid rgba(148, 163, 184, 0.1);
@@ -241,7 +237,6 @@ p {
     color: #334155;
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
     .cabinet-grid {
         grid-template-columns: 200px 1fr;
@@ -290,7 +285,6 @@ p {
     }
 }
 
-/* Вкладки */
 .tab-content {
     display: none;
 }
@@ -299,7 +293,7 @@ p {
     display: block;
 }
 
-/* Стили для карточек заказов */
+
 .orders-section {
     background: #F0F9FF;
     border: 1px solid rgba(148, 163, 184, 0.1);
@@ -336,7 +330,6 @@ p {
     color: #0F172A;
 }
 
-/* Стили для карточек платежей */
 .payments-section {
     background: #F0F9FF;
     border: 1px solid rgba(148, 163, 184, 0.1);
@@ -430,7 +423,6 @@ margin-top: 8px;
     color: white;
 }
 
-/* Стили для кнопок */
 .btn {
     display: inline-flex;
     align-items: center;
