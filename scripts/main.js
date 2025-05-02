@@ -1,29 +1,5 @@
 
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-
-function loadScriptAsync(src) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = true;
-        script.onload = resolve;
-        script.onerror = reject;
-        document.body.appendChild(script);
-    });
-}
-
-if (isMobile) {
-
-    document.querySelectorAll('.slide-particles').forEach(el => {
-        el.style.display = 'none';
-    });
-    
-    document.querySelectorAll('.hosting-promo').forEach(el => {
-        el.style.backgroundImage = 'none';
-        el.style.backgroundColor = '#f0f5ff';
-    });
-}
 
 document.addEventListener('DOMContentLoaded', function () {
 
