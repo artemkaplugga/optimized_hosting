@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-    <link rel="preload" href="./Images/cloud-video-poster.webp" as="image">
 
 </head>
 
@@ -145,8 +144,14 @@
                     <img src="./Images/Rectangle 36.png" alt="Cloud Technology" loading="lazy">
                 </video>
 
-                <img src="./Images/cloud-video-poster.webp" alt="Cloud Technology" loading="lazy"
-                    class="mobile-hero-background">
+                <img src="./Images/cloud-video-poster.webp" 
+                    alt="Cloud Technology" 
+                    loading="lazy"
+                    width="1920"
+                    height="1080"
+                    fetchpriority="high"
+                    class="mobile-hero-background"
+                    decoding="async">
                 <div class="video-overlay"></div>
             </div>
 
