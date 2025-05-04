@@ -290,25 +290,8 @@
                         <div class="support-card">
                             <div class="support-info">
                                 <h3 class="gradient-heading">Обращения в поддержку</h3>
-                                <div class="ticket-list">
-                                    <div class="ticket">
-                                        <div class="ticket-header">
-                                            <h4 class="gradient-heading">Тикет #34567</h4>
-                                            <span class="status open">Открыт</span>
-                                        </div>
-                                        <p>Проблема с подключением к серверу</p>
-                                        <p class="ticket-date">Создан: 15.03.2024</p>
-                                    </div>
-                                    <div class="ticket">
-                                        <div class="ticket-header">
-                                            <h4 class="gradient-heading">Тикет #34566</h4>
-                                            <span class="status closed">Закрыт</span>
-                                        </div>
-                                        <p>Вопрос по оплате</p>
-                                        <p class="ticket-date">Создан: 10.03.2024</p>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary">Создать обращение</button>
+                                <div class="ticket-list" id="ticketList"></div>
+                                <button class="btn btn-primary" id="openTicketPrompt">Создать обращение</button>
                             </div>
                             <div class="support-contacts">
                                 <h3 class="gradient-heading">Контакты поддержки</h3>
@@ -328,5 +311,53 @@
     <script src="./scripts/cabinet.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/header.js"></script>
+    <script>
+    // --- Тикеты в LocalStorage ---
+    function getTickets() {
+        return JSON.parse(localStorage.getItem('tickets') || '[]');
+    }
+    function saveTickets(tickets) {
+        localStorage.setItem('tickets', JSON.stringify(tickets));
+    }
+    function renderTickets() {
+        const tickets = getTickets();
+        const list = document.getElementById('ticketList');
+        if (!list) return;
+        list.innerHTML = '';
+        if (tickets.length === 0) {
+            list.innerHTML = '<p>Пока нет обращений.</p>';
+            return;
+        }
+        tickets.slice().reverse().forEach(ticket => {
+            const div = document.createElement('div');
+            div.className = 'ticket';
+            div.innerHTML = `<div class="ticket-header"><h4 class="gradient-heading">Тикет #${ticket.id}</h4><span class="status ${ticket.status}">${ticket.status === 'open' ? 'Открыт' : 'Закрыт'}</span></div><p>${ticket.subject}</p><p>${ticket.message}</p><p class="ticket-date">Создан: ${ticket.date}</p>${ticket.status === 'open' ? `<button class='btn btn-secondary' onclick='closeTicket(${ticket.id})'>Закрыть</button>` : ''}`;
+            list.appendChild(div);
+        });
+    }
+    function closeTicket(id) {
+        const tickets = getTickets();
+        const idx = tickets.findIndex(t => t.id === id);
+        if (idx !== -1) {
+            tickets[idx].status = 'closed';
+            saveTickets(tickets);
+            renderTickets();
+        }
+    }
+    // --- prompt для создания тикета ---
+    document.getElementById('openTicketPrompt').onclick = function() {
+        const subject = prompt('Введите тему обращения:');
+        if (!subject) return;
+        const message = prompt('Введите текст обращения:');
+        if (!message) return;
+        const tickets = getTickets();
+        const id = tickets.length ? Math.max(...tickets.map(t => t.id)) + 1 : 1;
+        tickets.push({ id, subject, message, status: 'open', date: new Date().toLocaleString() });
+        saveTickets(tickets);
+        renderTickets();
+    };
+    // --- При загрузке ---
+    document.addEventListener('DOMContentLoaded', renderTickets);
+    </script>
 </body>
 </html>
