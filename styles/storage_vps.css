@@ -213,7 +213,7 @@
     }
 }
 
-/* Добавляем общие стили для всех секций */
+
 .main-container {
     width: 1440px;
     margin: 0 auto;
@@ -228,6 +228,7 @@
     margin: 115px 0 2rem;
     box-sizing: border-box;
     position: relative;
+
 }
 
 .vds-tariffs {
@@ -261,8 +262,51 @@
         margin-top: 100px;
     }
     
-    .sc-11485f23-0.lbQEJT,
-    .vds-tariffs,
+    .vds-tariffs {
+        padding: 2rem;
+        height: auto;
+        min-height: 700px;
+    }
+    .tariff-content {
+        padding: 15px 30px;
+    }
+    .tariff-plans {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .plan {
+        width: calc(33.33% - 30px);
+        min-width: 200px;
+    }
+
+    .discounts-block,
+    .features-section2,
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .discounts-block {
+        padding: 20px 60px;
+        height: auto;
+        min-height: 180px;
+    }
+    .discount-percentages {
+        gap: 150px;
+        padding-left: 80px;
+    }
+    .discount-value {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .vds-tariffs {
+        padding: 2rem;
+        height: auto;
+        min-height: 700px;
+    }
+
     .discounts-block,
     .features-section2,
     .footer {
@@ -273,4 +317,343 @@
 
 .plan {
     margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .vds-tariffs {
+        padding: 1.5rem;
+        border-radius: 28px;
+    }
+    .tariff-content {
+        padding: 15px 20px;
+    }
+    .tariff-name {
+        font-size: 32px;
+    }
+    .tariff-specs {
+        font-size: 15px;
+    }
+    .tariff-plans {
+        gap: 30px;
+    }
+    .plan {
+        width: calc(50% - 20px);
+    }
+    .plan-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .vds-tariffs {
+        padding: 1.25rem;
+        border-radius: 24px;
+        margin: 30px 0;
+    }
+    .tariff-content {
+        padding: 10px 15px;
+    }
+    .tariff-name {
+        font-size: 28px;
+    }
+    .tariff-specs {
+        font-size: 14px;
+    }
+    .spec-item {
+        gap: 12px;
+    }
+    .plan {
+        padding: 15px;
+        height: 220px;
+    }
+    .plan-name {
+        font-size: 16px;
+    }
+    .plan-specs span {
+        font-size: 13px;
+    }
+    .price-per-hour {
+        font-size: 20px;
+    }
+    .price-per-month {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vds-tariffs {
+        padding: 1rem;
+        border-radius: 20px;
+        margin: 25px 0;
+    }
+    .tariff-content {
+        padding: 10px;
+    }
+    .tariff-header {
+        margin-bottom: 30px;
+    }
+    .tariff-name {
+        font-size: 24px;
+    }
+    .tariff-label {
+        font-size: 14px;
+    }
+    .tariff-specs {
+        font-size: 13px;
+    }
+    .tariff-plans {
+        gap: 20px;
+    }
+    .plan {
+        width: calc(50% - 15px);
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .vds-tariffs {
+        padding: 0.75rem;
+        border-radius: 16px;
+        margin: 20px 0;
+    }
+    .tariff-content {
+        padding: 8px;
+    }
+    .tariff-name {
+        font-size: 22px;
+    }
+    .tariff-specs {
+        font-size: 12px;
+    }
+    .spec-item {
+        gap: 8px;
+    }
+    .tariff-plans {
+        gap: 15px;
+    }
+    .plan {
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .plan-name {
+        font-size: 15px;
+    }
+    .plan-specs span {
+        font-size: 12px;
+    }
+    .price-per-hour {
+        font-size: 18px;
+    }
+    .price-per-month {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .vds-tariffs {
+        padding: 0.5rem;
+        border-radius: 12px;
+        margin: 15px 0;
+    }
+    .tariff-content {
+        padding: 5px;
+    }
+    .tariff-name {
+        font-size: 20px;
+    }
+    .tariff-label {
+        font-size: 12px;
+    }
+    .tariff-specs {
+        font-size: 11px;
+    }
+    .plan {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .plan-name {
+        font-size: 14px;
+    }
+    .plan-specs span {
+        font-size: 11px;
+    }
+    .price-per-hour {
+        font-size: 16px;
+    }
+    .price-per-month {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .discounts-block {
+        padding: 20px 40px;
+        min-height: 160px;
+    }
+    .discount-percentages {
+        gap: 100px;
+        padding-left: 60px;
+    }
+    .discount-value {
+        font-size: 80px;
+    }
+    .discount-info {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .discounts-block {
+        padding: 20px 30px;
+        min-height: 140px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .discount-percentages {
+        gap: 60px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .discount-value {
+        font-size: 60px;
+    }
+    .discount-info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .discounts-block {
+        padding: 15px 20px;
+        margin: 30px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .discount-info {
+        text-align: center;
+        max-width: none;
+        font-size: 14px;
+    }
+    .discount-percentages {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        align-items: center;
+        width: 100%;
+    }
+    .discount-item {
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+    .discount-value {
+        font-size: 32px;
+        margin: 0;
+    }
+    .discount-period {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .discounts-block {
+        padding: 12px 15px;
+        margin: 25px 0;
+        gap: 15px;
+    }
+    .discount-info {
+        font-size: 13px;
+    }
+    .discount-percentages {
+        gap: 12px;
+    }
+    .discount-item {
+        max-width: 260px;
+        padding: 8px;
+    }
+    .discount-value {
+        font-size: 28px;
+    }
+    .discount-period {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .discounts-block {
+        padding: 10px;
+        margin: 20px 0;
+        gap: 12px;
+    }
+    .discount-info {
+        font-size: 12px;
+    }
+    .discount-percentages {
+        gap: 10px;
+    }
+    .discount-item {
+        max-width: 240px;
+        padding: 6px;
+    }
+    .discount-value {
+        font-size: 24px;
+    }
+    .discount-period {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .footer-column {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+@media (max-width: 576px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+    .footer-column {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .footer-heading {
+        text-align: center;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-text,
+    .company-info,
+    .footer-links,
+    .footer-contact,
+    .footer-additional,
+    .footer-bottom {
+        text-align: center;
+    }
 }

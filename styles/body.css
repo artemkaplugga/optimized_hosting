@@ -16,7 +16,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Добавление content-visibility для улучшения производительности */
 main > section {
     content-visibility: auto;
     contain-intrinsic-size: 800px;
@@ -27,8 +26,7 @@ main > section {
         font-size: 15px;
         line-height: 1.5;
     }
-    
-    /* Уменьшаем сложность отрисовки */
+
     img {
         content-visibility: auto;
     }

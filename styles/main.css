@@ -1942,7 +1942,6 @@
 @media (max-width: 992px) {
     .hero-stats {
         width: 100%;
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 0 20px;
@@ -2344,5 +2343,3 @@
         width: 18px;
     }
 }
-
-
