@@ -53,6 +53,7 @@
     text-align: left;
 }
 
+
 @media (max-width: 1440px) {
     .features-section2 {
         margin-top: 35px;
@@ -368,6 +369,10 @@
     }
     .plan-name {
         font-size: 16px;
+    }
+
+    .plan-price {
+        margin-top: 0px;
     }
     .plan-specs span {
         font-size: 13px;

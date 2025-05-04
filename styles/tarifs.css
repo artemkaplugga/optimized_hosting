@@ -200,6 +200,7 @@ body {
 }
 
 .spec-item {
+    line-height: 1.4;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -210,6 +211,7 @@ body {
 }
 
 .tariff-plans {
+    line-height: 1.6;
     position: relative;
     z-index: 2;
     display: flex;
@@ -1936,7 +1938,7 @@ body {
     }
 }
 
-/* Scroll Animation Styles */
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -1948,7 +1950,7 @@ body {
     transform: translateY(0);
 }
 
-/* Add animation delay for staggered effect */
+
 .animate-on-scroll:nth-child(2) {
     transition-delay: 0.2s;
 }
