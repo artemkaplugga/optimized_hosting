@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles/tarifs.css">
+    <link rel="stylesheet" href="./styles/order-modal.css">
 </head>
 
 <body>
@@ -207,7 +208,11 @@
                     </div>
 
                     <div class="tariff-plans">
-                        <div class="plan animate-on-scroll" data-plan="ALB-1">
+                        <div class="plan animate-on-scroll" data-plan="ALB-1"
+                            data-month-paris="60.07" data-month-amsterdam="62.00" data-month-frankfurt="63.50"
+                            data-month-london="65.00" data-month-denver="66.00" data-month-vienna="61.00"
+                            data-month-stockholm="64.00" data-month-helsinki="63.00" data-month-moscow="59.00"
+                            data-month-spb="58.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -224,7 +229,11 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-2">
+                        <div class="plan animate-on-scroll" data-plan="ALB-2"
+                            data-month-paris="70.11" data-month-amsterdam="72.00" data-month-frankfurt="73.50"
+                            data-month-london="75.00" data-month-denver="76.00" data-month-vienna="71.00"
+                            data-month-stockholm="74.00" data-month-helsinki="73.00" data-month-moscow="69.00"
+                            data-month-spb="68.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -241,7 +250,11 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-3">
+                        <div class="plan animate-on-scroll" data-plan="ALB-3"
+                            data-month-paris="100.18" data-month-amsterdam="102.00" data-month-frankfurt="104.00"
+                            data-month-london="106.00" data-month-denver="108.00" data-month-vienna="101.00"
+                            data-month-stockholm="105.00" data-month-helsinki="104.00" data-month-moscow="99.00"
+                            data-month-spb="98.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -258,7 +271,11 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-4">
+                        <div class="plan animate-on-scroll" data-plan="ALB-4"
+                            data-month-paris="165.36" data-month-amsterdam="168.00" data-month-frankfurt="170.00"
+                            data-month-london="172.00" data-month-denver="175.00" data-month-vienna="166.00"
+                            data-month-stockholm="171.00" data-month-helsinki="170.00" data-month-moscow="164.00"
+                            data-month-spb="162.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -275,7 +292,11 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-5">
+                        <div class="plan animate-on-scroll" data-plan="ALB-5"
+                            data-month-paris="300.72" data-month-amsterdam="305.00" data-month-frankfurt="310.00"
+                            data-month-london="315.00" data-month-denver="320.00" data-month-vienna="302.00"
+                            data-month-stockholm="312.00" data-month-helsinki="310.00" data-month-moscow="299.00"
+                            data-month-spb="295.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -515,6 +536,7 @@
     <script src="./scripts/header.js"></script>
     <script src="./scripts/dedicated-servers-animations.js"></script>
     <script src="./scripts/scrollAnim.js"></script>
+    <script src="./scripts/order.js"></script>
 
     <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -581,6 +603,59 @@
                     <button type="submit" class="sign-in-btn">Создать аккаунт</button>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div id="orderModal" class="order-modal">
+        <div class="order-modal-content">
+            <button class="order-modal-close">&times;</button>
+            <div class="order-modal-header">
+                <h2 class="order-modal-title">Оформление заказа</h2>
+                <p class="order-modal-subtitle">Выбранный тариф: <span id="selectedPlanName"></span></p>
+            </div>
+            <form class="order-form-form" id="orderForm">
+                <div class="order-form-group">
+                    <label for="billingPeriod">Период оплаты</label>
+                    <select id="billingPeriod" name="billingPeriod">
+                        <option value="monthly">Ежемесячная оплата</option>
+                    </select>
+                </div>
+                <div class="order-form-group">
+                    <label for="location">Локация</label>
+                    <select id="location" name="location">
+                        <option value="paris">Париж</option>
+                        <option value="amsterdam">Амстердам</option>
+                        <option value="frankfurt">Франкфурт</option>
+                    </select>
+                </div>
+                <div class="order-form-group">
+                    <label for="os">Операционная система</label>
+                    <select id="os" name="os">
+                        <option value="windows">Windows Server</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="debian">Debian</option>
+                        <option value="centos">CentOS</option>
+                        <option value="almalinux">AlmaLinux</option>
+                        <option value="rockylinux">Rocky Linux</option>
+                        <option value="freebsd">FreeBSD</option>
+                    </select>
+                </div>
+                <div class="order-form-summary">
+                    <div class="order-form-summary-item">
+                        <span>Стоимость:</span>
+                        <span id="orderPrice">€0.00</span>
+                    </div>
+                    <div class="order-form-summary-item">
+                        <span>Скидка:</span>
+                        <span id="orderDiscount">0%</span>
+                    </div>
+                    <div class="order-form-total">
+                        <span>Итого:</span>
+                        <span id="orderTotal">€0.00</span>
+                    </div>
+                </div>
+                <button type="submit" class="order-form-submit-btn">Оформить заказ</button>
+            </form>
         </div>
     </div>
 </body>

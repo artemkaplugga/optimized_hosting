@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles/tarifs.css">
+    <link rel="stylesheet" href="./styles/order-modal.css">
 </head>
 
 <body>
@@ -54,7 +55,7 @@
                         </div>
                     </nav>
                 </div>
-               
+
                 <div class="auth-links">
                     <a href="#" class="auth-link" id="loginBtn">вход</a>
                     <span class="auth-separator">/</span>
@@ -98,7 +99,7 @@
                         <button class="mobile-dropdown-toggle">
                             <span>услуги</span>
                             <svg class="arrow-down" width="10" height="6" viewBox="0 0 10 6">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none" />
                             </svg>
                         </button>
                         <div class="mobile-dropdown-menu">
@@ -238,7 +239,14 @@
                     </div>
 
                     <div class="tariff-plans">
-                        <div class="plan animate-on-scroll" data-plan="ALB-1">
+                        <div class="plan animate-on-scroll" data-plan="ALB-1" data-price-paris="0.02"
+                            data-month-paris="5.68" data-price-amsterdam="0.021" data-month-amsterdam="6.10"
+                            data-price-frankfurt="0.019" data-month-frankfurt="5.30" data-price-london="0.025"
+                            data-month-london="7.10" data-price-denver="0.022" data-month-denver="6.30"
+                            data-price-vienna="0.020" data-month-vienna="5.90" data-price-stockholm="0.023"
+                            data-month-stockholm="6.50" data-price-helsinki="0.0215" data-month-helsinki="6.20"
+                            data-price-moscow="0.018" data-month-moscow="5.10" data-price-spb="0.0175"
+                            data-month-spb="5.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -255,7 +263,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-2">
+                        <div class="plan animate-on-scroll" data-plan="ALB-2" data-price-paris="0.04"
+                            data-month-paris="11.37" data-price-amsterdam="0.042" data-month-amsterdam="12.10"
+                            data-price-frankfurt="0.037" data-month-frankfurt="10.60" data-price-london="0.051"
+                            data-month-london="13.90" data-price-denver="0.045" data-month-denver="12.80"
+                            data-price-vienna="0.041" data-month-vienna="11.80" data-price-stockholm="0.046"
+                            data-month-stockholm="12.90" data-price-helsinki="0.043" data-month-helsinki="12.30"
+                            data-price-moscow="0.036" data-month-moscow="10.20" data-price-spb="0.035"
+                            data-month-spb="10.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -272,7 +287,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-3">
+                        <div class="plan animate-on-scroll" data-plan="ALB-3" data-price-paris="0.06"
+                            data-month-paris="22.74" data-price-amsterdam="0.065" data-month-amsterdam="24.10"
+                            data-price-frankfurt="0.055" data-month-frankfurt="21.00" data-price-london="0.075"
+                            data-month-london="27.50" data-price-denver="0.068" data-month-denver="25.00"
+                            data-price-vienna="0.062" data-month-vienna="23.50" data-price-stockholm="0.070"
+                            data-month-stockholm="25.80" data-price-helsinki="0.066" data-month-helsinki="24.60"
+                            data-price-moscow="0.053" data-month-moscow="20.00" data-price-spb="0.052"
+                            data-month-spb="19.50">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -289,7 +311,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-4">
+                        <div class="plan animate-on-scroll" data-plan="ALB-4" data-price-paris="0.15"
+                            data-month-paris="45.48" data-price-amsterdam="0.16" data-month-amsterdam="48.00"
+                            data-price-frankfurt="0.13" data-month-frankfurt="41.00" data-price-london="0.19"
+                            data-month-london="54.00" data-price-denver="0.17" data-month-denver="49.00"
+                            data-price-vienna="0.15" data-month-vienna="46.00" data-price-stockholm="0.18"
+                            data-month-stockholm="51.00" data-price-helsinki="0.16" data-month-helsinki="47.00"
+                            data-price-moscow="0.12" data-month-moscow="39.00" data-price-spb="0.11"
+                            data-month-spb="37.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -306,7 +335,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-5">
+                        <div class="plan animate-on-scroll" data-plan="ALB-5" data-price-paris="0.26"
+                            data-month-paris="90.95" data-price-amsterdam="0.28" data-month-amsterdam="98.00"
+                            data-price-frankfurt="0.23" data-month-frankfurt="82.00" data-price-london="0.33"
+                            data-month-london="112.00" data-price-denver="0.29" data-month-denver="101.00"
+                            data-price-vienna="0.27" data-month-vienna="93.00" data-price-stockholm="0.31"
+                            data-month-stockholm="105.00" data-price-helsinki="0.28" data-month-helsinki="99.00"
+                            data-price-moscow="0.22" data-month-moscow="78.00" data-price-spb="0.21"
+                            data-month-spb="75.00">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -354,7 +390,14 @@
                     </div>
 
                     <div class="tariff-plans">
-                        <div class="plan animate-on-scroll" data-plan="ALB-1">
+                        <div class="plan animate-on-scroll" data-plan="ALB-1" data-price-paris="0.04"
+                            data-month-paris="8.13" data-price-amsterdam="0.044" data-month-amsterdam="8.94"
+                            data-price-frankfurt="0.036" data-month-frankfurt="7.32" data-price-london="0.048"
+                            data-month-london="9.76" data-price-denver="0.046" data-month-denver="9.35"
+                            data-price-vienna="0.042" data-month-vienna="8.54" data-price-stockholm="0.043"
+                            data-month-stockholm="8.78" data-price-helsinki="0.0428" data-month-helsinki="8.70"
+                            data-price-moscow="0.038" data-month-moscow="7.72" data-price-spb="0.0372"
+                            data-month-spb="7.56">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -371,7 +414,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-2">
+                        <div class="plan animate-on-scroll" data-plan="ALB-2" data-price-paris="0.06"
+                            data-month-paris="16.27" data-price-amsterdam="0.066" data-month-amsterdam="17.90"
+                            data-price-frankfurt="0.054" data-month-frankfurt="14.64" data-price-london="0.072"
+                            data-month-london="19.52" data-price-denver="0.069" data-month-denver="18.71"
+                            data-price-vienna="0.063" data-month-vienna="17.08" data-price-stockholm="0.0648"
+                            data-month-stockholm="17.57" data-price-helsinki="0.0642" data-month-helsinki="17.40"
+                            data-price-moscow="0.057" data-month-moscow="15.46" data-price-spb="0.0558"
+                            data-month-spb="15.13">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -388,7 +438,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-3">
+                        <div class="plan animate-on-scroll" data-plan="ALB-3" data-price-paris="0.10"
+                            data-month-paris="32.52" data-price-amsterdam="0.11" data-month-amsterdam="35.77"
+                            data-price-frankfurt="0.09" data-month-frankfurt="29.27" data-price-london="0.12"
+                            data-month-london="39.02" data-price-denver="0.115" data-month-denver="37.40"
+                            data-price-vienna="0.105" data-month-vienna="34.15" data-price-stockholm="0.108"
+                            data-month-stockholm="35.12" data-price-helsinki="0.107" data-month-helsinki="34.80"
+                            data-price-moscow="0.095" data-month-moscow="30.89" data-price-spb="0.093"
+                            data-month-spb="30.24">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -405,7 +462,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-4">
+                        <div class="plan animate-on-scroll" data-plan="ALB-4" data-price-paris="0.20"
+                            data-month-paris="65.03" data-price-amsterdam="0.22" data-month-amsterdam="71.53"
+                            data-price-frankfurt="0.18" data-month-frankfurt="58.53" data-price-london="0.24"
+                            data-month-london="78.04" data-price-denver="0.23" data-month-denver="74.78"
+                            data-price-vienna="0.21" data-month-vienna="68.28" data-price-stockholm="0.216"
+                            data-month-stockholm="70.23" data-price-helsinki="0.214" data-month-helsinki="69.58"
+                            data-price-moscow="0.19" data-month-moscow="61.78" data-price-spb="0.186"
+                            data-month-spb="60.48">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -422,7 +486,14 @@
                             </div>
                         </div>
 
-                        <div class="plan animate-on-scroll" data-plan="ALB-5">
+                        <div class="plan animate-on-scroll" data-plan="ALB-5" data-price-paris="0.32"
+                            data-month-paris="129.73" data-price-amsterdam="0.352" data-month-amsterdam="142.70"
+                            data-price-frankfurt="0.288" data-month-frankfurt="116.76" data-price-london="0.384"
+                            data-month-london="155.68" data-price-denver="0.368" data-month-denver="149.19"
+                            data-price-vienna="0.336" data-month-vienna="136.22" data-price-stockholm="0.3456"
+                            data-month-stockholm="140.10" data-price-helsinki="0.343" data-month-helsinki="139.01"
+                            data-price-moscow="0.304" data-month-moscow="122.24" data-price-spb="0.2976"
+                            data-month-spb="120.65">
                             <div class="bottom-left"></div>
                             <div class="bottom-right"></div>
                             <div class="plan-header">
@@ -707,6 +778,7 @@
     <script src="./scripts/header.js"></script>
     <script src="./scripts/tarifs-animations.js"></script>
     <script src="./scripts/scrollAnim.js"></script>
+    <script src="./scripts/order.js"></script>
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <div class="modal-left">
@@ -772,6 +844,67 @@
                     <button type="submit" class="sign-in-btn">Создать аккаунт</button>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div id="orderModal" class="order-modal">
+        <div class="order-modal-content">
+            <button class="order-modal-close">&times;</button>
+            <div class="order-modal-header">
+                <h2 class="order-modal-title">Оформление заказа</h2>
+                <p class="order-modal-subtitle">Выбранный тариф: <span id="selectedPlanName"></span></p>
+            </div>
+            <form class="order-form-form" id="orderForm">
+                <div class="order-form-group">
+                    <label for="billingPeriod">Период оплаты</label>
+                    <select id="billingPeriod" name="billingPeriod">
+                        <option value="hourly">Почасовая оплата</option>
+                        <option value="monthly">Ежемесячная оплата</option>
+                    </select>
+                </div>
+                <div class="order-form-group">
+                    <label for="location">Локация</label>
+                    <select id="location" name="location">
+                        <option value="paris">Париж</option>
+                        <option value="amsterdam">Амстердам</option>
+                        <option value="frankfurt">Франкфурт</option>
+                        <option value="london">Лондон</option>
+                        <option value="denver">Денвер</option>
+                        <option value="vienna">Вена</option>
+                        <option value="stockholm">Стокгольм</option>
+                        <option value="helsinki">Хельсинки</option>
+                        <option value="moscow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                    </select>
+                </div>
+                <div class="order-form-group">
+                    <label for="os">Операционная система</label>
+                    <select id="os" name="os">
+                        <option value="windows">Windows Server</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="debian">Debian</option>
+                        <option value="centos">CentOS</option>
+                        <option value="almalinux">AlmaLinux</option>
+                        <option value="rockylinux">Rocky Linux</option>
+                        <option value="freebsd">FreeBSD</option>
+                    </select>
+                </div>
+                <div class="order-form-summary">
+                    <div class="order-form-summary-item">
+                        <span>Стоимость:</span>
+                        <span id="orderPrice">€0.00</span>
+                    </div>
+                    <div class="order-form-summary-item">
+                        <span>Скидка:</span>
+                        <span id="orderDiscount">0%</span>
+                    </div>
+                    <div class="order-form-total">
+                        <span>Итого:</span>
+                        <span id="orderTotal">€0.00</span>
+                    </div>
+                </div>
+                <button type="submit" class="order-form-submit-btn">Оформить заказ</button>
+            </form>
         </div>
     </div>
 
