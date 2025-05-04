@@ -92,41 +92,52 @@ document.addEventListener('DOMContentLoaded', function () {
             .toUpperCase();
     }
 
-    function resetUIToLoggedOut() {
-  
-        if (loginBtn) loginBtn.style.display = 'inline';
-        if (document.querySelector('.auth-separator')) document.querySelector('.auth-separator').style.display = 'inline';
-        if (registerBtn) registerBtn.style.display = 'inline';
-     
-        if (userProfile) userProfile.style.display = 'none';
+    function updateMobileUIAfterLogin(userData) {
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        const mobileRegisterBtn = document.getElementById('mobileRegisterBtn');
+        const mobileUserProfile = document.getElementById('mobileUserProfile');
+        const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+        const mobileUserName = document.getElementById('mobileUserName');
+
+        if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
+        if (mobileRegisterBtn) mobileRegisterBtn.style.display = 'none';
+        if (mobileUserProfile) {
+            mobileUserProfile.style.display = 'flex';
+            if (mobileUserAvatar) mobileUserAvatar.textContent = getInitials(userData.username);
+            if (mobileUserName) mobileUserName.textContent = userData.username;
+        }
     }
 
-  
+    function resetMobileUIToLoggedOut() {
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        const mobileRegisterBtn = document.getElementById('mobileRegisterBtn');
+        const mobileUserProfile = document.getElementById('mobileUserProfile');
+
+        if (mobileLoginBtn) mobileLoginBtn.style.display = 'block';
+        if (mobileRegisterBtn) mobileRegisterBtn.style.display = 'block';
+        if (mobileUserProfile) mobileUserProfile.style.display = 'none';
+    }
+
     function updateUIAfterLogin(userData) {
-      
         if (loginBtn) loginBtn.style.display = 'none';
         if (document.querySelector('.auth-separator')) document.querySelector('.auth-separator').style.display = 'none';
         if (registerBtn) registerBtn.style.display = 'none';
-
         if (userProfile) userProfile.style.display = 'block';
-  
         if (userAvatar) userAvatar.textContent = getInitials(userData.username);
-        
-    
         if (userMenuHeader) {
             userMenuHeader.querySelector('.user-name').textContent = userData.username;
             userMenuHeader.querySelector('.user-email').textContent = userData.email;
         }
-
-     
         localStorage.setItem('user', JSON.stringify(userData));
+        updateMobileUIAfterLogin(userData);
     }
 
-    function logout() {
-        localStorage.removeItem('user');
-    
-        resetUIToLoggedOut(); 
-        window.location.href = 'index.html';
+    function resetUIToLoggedOut() {
+        if (loginBtn) loginBtn.style.display = 'block';
+        if (document.querySelector('.auth-separator')) document.querySelector('.auth-separator').style.display = 'inline';
+        if (registerBtn) registerBtn.style.display = 'block';
+        if (userProfile) userProfile.style.display = 'none';
+        resetMobileUIToLoggedOut();
     }
 
     
@@ -179,6 +190,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (logoutBtn) { 
         logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            logout();
+        });
+    }
+
+    const mobileLogoutBtn = document.getElementById('mobileLogoutBtn');
+    if (mobileLogoutBtn) {
+        mobileLogoutBtn.addEventListener('click', function(e) {
             e.preventDefault();
             logout();
         });
