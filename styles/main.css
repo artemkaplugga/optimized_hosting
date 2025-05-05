@@ -266,7 +266,7 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background: rgba(0, 204, 255, 0.3);
+    background: rgb(0, 154, 192);
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
 }
@@ -278,7 +278,7 @@
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #00CCFF;
     opacity: 0.6;
     transition: all 0.3s ease;
     margin: 0 5px !important;
@@ -289,7 +289,7 @@
     border-radius: 10px;
     background: #00CCFF;
     opacity: 1;
-    box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
+    box-shadow: 0 0 10px rgb(0, 204, 255);
 }
 
 .slider, .slider_Two, .slider_Three {
