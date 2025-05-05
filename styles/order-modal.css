@@ -256,4 +256,76 @@
   .order-form-total span:last-child {
     font-size: 1.1rem;
   }
+}
+
+/* Кастомные выпадающие списки */
+.custom-select {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+  user-select: none;
+}
+.selected-option {
+  background: #23242a;
+  border: 1.5px solid #2e2f38;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  transition: border 0.2s;
+}
+.selected-option .option-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+.selected-option .arrow {
+  margin-left: auto;
+  font-size: 1.2em;
+  color: #00aaff;
+}
+.options-list {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #23242a;
+  border: 1.5px solid #2e2f38;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  max-height: 260px;
+  overflow-y: auto;
+}
+.custom-select.open .options-list {
+  display: block;
+}
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.option-item:hover {
+  background: #222b3a;
+}
+.option-item .option-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+/* Для стрелки вниз при открытии */
+.custom-select.open .selected-option .arrow {
+  transform: rotate(180deg);
 } 

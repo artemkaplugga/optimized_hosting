@@ -622,29 +622,86 @@
             <form class="order-form-form" id="orderForm">
                 <div class="order-form-group">
                     <label for="billingPeriod">Период оплаты</label>
-                    <select id="billingPeriod" name="billingPeriod">
-                        <option value="monthly">Ежемесячная оплата</option>
-                    </select>
+                    <div class="custom-select" id="customBillingPeriod">
+                        <div class="selected-option">
+                            <img src="Images/free-icon-calendar-1207480.png" alt="Ежемесячная оплата" class="option-icon">
+                            <span class="option-label">Ежемесячная оплата</span>
+                            <span class="arrow">&#9662;</span>
+                        </div>
+                        <div class="options-list">
+                            <div class="option-item" data-value="monthly">
+                                <img src="Images/free-icon-calendar-1207480.png" alt="Ежемесячная оплата" class="option-icon">
+                                <span>Ежемесячная оплата</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="billingPeriod" id="billingPeriod" value="monthly">
                 </div>
                 <div class="order-form-group">
                     <label for="location">Локация</label>
-                    <select id="location" name="location">
-                        <option value="paris">Париж</option>
-                        <option value="amsterdam">Амстердам</option>
-                        <option value="frankfurt">Франкфурт</option>
-                    </select>
+                    <div class="custom-select" id="customLocationSelect">
+                        <div class="selected-option">
+                            <img src="Images/free-icon-france-330490.png" alt="Париж" class="option-icon">
+                            <span class="option-label">Париж</span>
+                            <span class="arrow">&#9662;</span>
+                        </div>
+                        <div class="options-list">
+                            <div class="option-item" data-value="paris">
+                                <img src="Images/free-icon-france-330490.png" alt="Париж" class="option-icon">
+                                <span>Париж</span>
+                            </div>
+                            <div class="option-item" data-value="amsterdam">
+                                <img src="Images/free-icon-netherlands-206615.png" alt="Амстердам" class="option-icon">
+                                <span>Амстердам</span>
+                            </div>
+                            <div class="option-item" data-value="frankfurt">
+                                <img src="Images/free-icon-germany-555613.png" alt="Франкфурт" class="option-icon">
+                                <span>Франкфурт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="location" id="location" value="paris">
                 </div>
                 <div class="order-form-group">
                     <label for="os">Операционная система</label>
-                    <select id="os" name="os">
-                        <option value="windows">Windows Server</option>
-                        <option value="ubuntu">Ubuntu</option>
-                        <option value="debian">Debian</option>
-                        <option value="centos">CentOS</option>
-                        <option value="almalinux">AlmaLinux</option>
-                        <option value="rockylinux">Rocky Linux</option>
-                        <option value="freebsd">FreeBSD</option>
-                    </select>
+                    <div class="custom-select" id="customOsSelect">
+                        <div class="selected-option">
+                            <img src="Images/windows 1.svg" alt="Windows Server" class="option-icon">
+                            <span class="option-label">Windows Server</span>
+                            <span class="arrow">&#9662;</span>
+                        </div>
+                        <div class="options-list">
+                            <div class="option-item" data-value="windows">
+                                <img src="Images/windows 1.svg" alt="Windows Server" class="option-icon">
+                                <span>Windows Server</span>
+                            </div>
+                            <div class="option-item" data-value="ubuntu">
+                                <img src="Images/ubuntu 1.svg" alt="Ubuntu" class="option-icon">
+                                <span>Ubuntu</span>
+                            </div>
+                            <div class="option-item" data-value="debian">
+                                <img src="Images/debian 1.svg" alt="Debian" class="option-icon">
+                                <span>Debian</span>
+                            </div>
+                            <div class="option-item" data-value="centos">
+                                <img src="Images/centos 1.svg" alt="CentOS" class="option-icon">
+                                <span>CentOS</span>
+                            </div>
+                            <div class="option-item" data-value="almalinux">
+                                <img src="Images/alma 1.svg" alt="AlmaLinux" class="option-icon">
+                                <span>AlmaLinux</span>
+                            </div>
+                            <div class="option-item" data-value="rockylinux">
+                                <img src="Images/rocky 1.svg" alt="Rocky Linux" class="option-icon">
+                                <span>Rocky Linux</span>
+                            </div>
+                            <div class="option-item" data-value="freebsd">
+                                <img src="Images/freebsd 1.svg" alt="FreeBSD" class="option-icon">
+                                <span>FreeBSD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="os" id="os" value="windows">
                 </div>
                 <div class="order-form-summary">
                     <div class="order-form-summary-item">

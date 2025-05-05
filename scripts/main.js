@@ -188,6 +188,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    function logout() {
+        // Удаляем данные пользователя из localStorage
+        localStorage.removeItem('user');
+        // Сбросить UI
+        if (typeof resetUIToLoggedOut === 'function') resetUIToLoggedOut();
+        // Перезагрузить страницу или перенаправить на главную
+        window.location.href = 'index.html';
+    }
+
     if (logoutBtn) { 
         logoutBtn.addEventListener('click', function(e) {
             e.preventDefault();

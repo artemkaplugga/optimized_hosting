@@ -220,4 +220,62 @@ document.addEventListener('DOMContentLoaded', function() {
         // Можно добавить уведомление об успешном заказе
         alert('Заказ успешно оформлен!');
     });
+
+    // --- Кастомные выпадающие списки ---
+    function setupCustomSelect(selectId, inputId, onChange) {
+        const custom = document.getElementById(selectId);
+        if (!custom) return;
+        const selected = custom.querySelector('.selected-option');
+        const options = custom.querySelector('.options-list');
+        const optionItems = custom.querySelectorAll('.option-item');
+        const hiddenInput = document.getElementById(inputId);
+
+        selected.addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.querySelectorAll('.custom-select').forEach(cs => {
+                if (cs !== custom) cs.classList.remove('open');
+            });
+            custom.classList.toggle('open');
+        });
+
+        optionItems.forEach(option => {
+            option.addEventListener('click', function() {
+                const icon = option.querySelector('.option-icon').src;
+                const label = option.querySelector('span').textContent;
+                selected.querySelector('.option-icon').src = icon;
+                selected.querySelector('.option-label').textContent = label;
+                hiddenInput.value = option.dataset.value;
+                custom.classList.remove('open');
+                if (typeof onChange === 'function') onChange(option.dataset.value);
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!custom.contains(e.target)) {
+                custom.classList.remove('open');
+            }
+        });
+    }
+
+    // --- Инициализация кастомных select ---
+    setupCustomSelect('customBillingPeriod', 'billingPeriod', function(val) {
+        // Триггерим смену периода оплаты (обновление цены)
+        if (typeof billingPeriod !== 'undefined') billingPeriod.value = val;
+        if (typeof billingPeriod !== 'undefined' && billingPeriod.dispatchEvent) {
+            billingPeriod.dispatchEvent(new Event('change'));
+        }
+    });
+    setupCustomSelect('customLocationSelect', 'location', function(val) {
+        // Триггерим смену локации (обновление цены)
+        if (typeof locationSelect !== 'undefined') locationSelect.value = val;
+        if (typeof locationSelect !== 'undefined' && locationSelect.dispatchEvent) {
+            locationSelect.dispatchEvent(new Event('change'));
+        }
+    });
+    setupCustomSelect('customOsSelect', 'os', function(val) {
+        // Можно добавить обработку смены ОС, если нужно
+    });
+
+    // --- Удаляю обработчики для обычных select (location, billingPeriod, os) ---
+    // (Они теперь не нужны, всё через кастомные select)
 }); 
