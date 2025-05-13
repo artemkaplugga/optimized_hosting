@@ -1,4 +1,4 @@
-// Fancybox video gallery init (отдельный файл)
+
 
 document.addEventListener('DOMContentLoaded', function () {
     if (window.Fancybox) {

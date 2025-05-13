@@ -30,19 +30,19 @@
                                 </div>
                                 <div class="dropdown-menu">
                                     <a href="tarifs.html" class="dropdown-link">
-                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                         Виртуальные серверы
                                     </a>
                                     <a href="high_cpu.html" class="dropdown-link">
-                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                         HIGH-CPU серверы
                                     </a>
                                     <a href="dedicated-servers.html" class="dropdown-link">
-                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                         Выделенные серверы
                                     </a>
                                     <a href="storage_vps.html" class="dropdown-link">
-                                        <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                        <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                         storage VPS
                                     </a>
                                 </div>
@@ -101,19 +101,19 @@
                         </button>
                         <div class="mobile-dropdown-menu">
                             <a href="tarifs.html" class="mobile-dropdown-link">
-                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                 Виртуальные серверы
                             </a>
                             <a href="high_cpu.html" class="mobile-dropdown-link">
-                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                 HIGH-CPU серверы
                             </a>
                             <a href="dedicated-servers.html" class="mobile-dropdown-link">
-                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                 Выделенные серверы
                             </a>
                             <a href="storage_vps.html" class="mobile-dropdown-link">
-                                <img src="Images/cloudhosting.png" alt="icon" class="dropdown-icon">
+                                <img src="Images/cloudhosting.webp" alt="icon" class="dropdown-icon">
                                 storage VPS
                             </a>
                         </div>
@@ -252,56 +252,54 @@
     <script src="scripts/main.js"></script>
     <script src="./scripts/header.js"></script>
 
-    <!-- Модальное окно для входа -->
-    <div class="modal" id="loginModal">
+    <div id="loginModal" class="modal">
         <div class="modal-content">
             <div class="modal-left">
-                <img src="Images/logo.svg" alt="Logo" class="modal-logo">
-                <h2>Login System</h2>
-                <p>Login into your Account</p>
+                <img src="./Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Система входа</h2>
+                <p>Войдите в свой аккаунт</p>
             </div>
             <div class="modal-right">
                 <div class="modal-header">
-                    <h2>Login Account</h2>
-                    <p>Sign in to continue your progress</p>
+                    <h2>Вход в аккаунт</h2>
+                    <p>Войдите в систему, чтобы продолжить</p>
                     <button class="modal-close">&times;</button>
                 </div>
                 <form class="modal-form">
                     <div class="form-group">
-                        <label for="studentId">Login</label>
+                        <label for="studentId">Логин</label>
                         <input type="text" id="studentId" name="studentId" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Пароль</label>
                         <input type="password" id="password" name="password" required>
                         <div class="password-toggle">
                             <input type="checkbox" id="showPassword">
-                            <label for="showPassword">Show password</label>
+                            <label for="showPassword">Показать пароль</label>
                         </div>
                     </div>
-                    <button type="submit" class="sign-in-btn">Sign in</button>
+                    <button type="submit" class="sign-in-btn">Войти</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Модальное окно для регистрации -->
-    <div class="modal" id="registerModal">
+    <div id="registerModal" class="modal">
         <div class="modal-content">
             <div class="modal-left">
-                <img src="Images/logo.svg" alt="Logo" class="modal-logo">
-                <h2>Registration System</h2>
-                <p>Register your Account</p>
+                <img src="./Images/logo.svg" alt="Logo" class="modal-logo">
+                <h2>Система регистрации</h2>
+                <p>Зарегистрируйте свой аккаунт</p>
             </div>
             <div class="modal-right">
                 <div class="modal-header">
-                    <h2>Create Account</h2>
-                    <p>Fill in your details to get started</p>
+                    <h2>Создайте свой аккаунт</h2>
+                    <p>Введите свои данные, чтобы начать</p>
                     <button class="modal-close">&times;</button>
                 </div>
                 <form class="modal-form">
                     <div class="form-group">
-                        <label for="regStudentId">Username</label>
+                        <label for="regStudentId">Имя пользователя</label>
                         <input type="text" id="regStudentId" name="regStudentId" required>
                     </div>
                     <div class="form-group">
@@ -309,14 +307,14 @@
                         <input type="email" id="regEmail" name="regEmail" required>
                     </div>
                     <div class="form-group">
-                        <label for="regPassword">Password</label>
+                        <label for="regPassword">Пароль</label>
                         <input type="password" id="regPassword" name="regPassword" required>
                         <div class="password-toggle">
                             <input type="checkbox" id="showRegPassword">
-                            <label for="showRegPassword">Show password</label>
+                            <label for="showRegPassword">Показать пароль</label>
                         </div>
                     </div>
-                    <button type="submit" class="sign-in-btn">Create Account</button>
+                    <button type="submit" class="sign-in-btn">Создать аккаунт</button>
                 </form>
             </div>
         </div>
